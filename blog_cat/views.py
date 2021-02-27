@@ -1,8 +1,7 @@
 from django.views.generic.base import TemplateView
 from generic.mixins import CategoryListMixin
 from django.views.generic import ListView
-from lists.models import BlogCategory
-from blog.models import Blog
+from blog_cat.models import BlogCategory
 from common.utils import get_small_template
 
 
