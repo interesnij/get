@@ -15,7 +15,7 @@ class ServiceAdmin(admin.ModelAdmin):
         DocServiceInline,
         VideoServiceInline,
     ]
-    list_display = ['title', 'description', 'created', 'category']
+    list_display = ['title', 'description', 'created']
     list_filter = ['created', 'category']
     search_fields = ['title', 'description', 'created']
 
