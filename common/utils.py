@@ -9,7 +9,7 @@ def try_except(value):
     except:
         return False
 
-def get_small_template(template, user_agent):
+def get_small_template(template_name, user_agent):
     if MOBILE_AGENT_RE.match(user_agent):
         template_name = template_name
     else:
