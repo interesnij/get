@@ -25,7 +25,6 @@
         init_classic_menu();
         init_fullscreen_menu();
         init_side_panel();
-        init_lightbox();
         init_parallax();
         init_shortcodes();
         init_team();
