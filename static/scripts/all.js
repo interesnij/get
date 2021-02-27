@@ -2,10 +2,9 @@
     "use strict";
 
     $(window).load(function(){
-        $("body").imagesLoaded(function(){
             $(".page-loader div").fadeOut();
-            $(".page-loader").delay(200).fadeOut("slow");
-        });
+            $(".page-loader").delay(200).fadeOut("slow")
+        })
         init_scroll_navigate();
 
         $(window).trigger("scroll");
