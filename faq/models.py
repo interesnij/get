@@ -22,11 +22,11 @@ class FaqCategory(models.Model):
 class Faq(models.Model):
 	title = models.CharField(max_length=200, verbose_name="Название")
 	created = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name="Создан")
-    description = models.CharField(max_length=500, blank=True, verbose_name="Описание")
-    content = models.TextField(verbose_name="content")
-    creator = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, on_delete=models.SET_NULL, verbose_name="Создатель")
-    slug = models.SlugField(populate_from='title', unique=True, db_index=True)
-    category = models.ManyToManyField(FaqCategory, related_name="faq_categories", blank=True, verbose_name="Категория")
+	description = models.CharField(max_length=500, blank=True, verbose_name="Описание")
+	content = models.TextField(verbose_name="content")
+	creator = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, on_delete=models.SET_NULL, verbose_name="Создатель")
+	slug = models.SlugField(populate_from='title', unique=True, db_index=True)
+	category = models.ManyToManyField(FaqCategory, related_name="faq_categories", blank=True, verbose_name="Категория")
 
 	class Meta:
 		ordering = ["-created"]
@@ -38,26 +38,26 @@ class Faq(models.Model):
 		return self.title
 
 class FaqDoc(models.Model):
-    title = models.CharField(max_length=200, verbose_name="Название")
-    file = models.FileField(upload_to=upload_to_user_directory, verbose_name="Документ")
-    faq = models.ForeignKey(Faq, related_name='doc_faq', on_delete=models.CASCADE, blank=True)
+	title = models.CharField(max_length=200, verbose_name="Название")
+	file = models.FileField(upload_to=upload_to_user_directory, verbose_name="Документ")
+	faq = models.ForeignKey(Faq, related_name='doc_faq', on_delete=models.CASCADE, blank=True)
 
-    class Meta:
-        verbose_name = "Документ"
-        verbose_name_plural = "Документы"
+	class Meta:
+		verbose_name = "Документ"
+		verbose_name_plural = "Документы"
 
 class FaqPhoto(models.Model):
-    file = ProcessedImageField(format='JPEG', options={'quality': 90}, upload_to=upload_to_user_directory, processors=[Transpose(), ResizeToFit(width=1024, upscale=False)])
-    faq = models.ForeignKey(Faq, related_name='image_faq', on_delete=models.CASCADE, blank=True)
+	file = ProcessedImageField(format='JPEG', options={'quality': 90}, upload_to=upload_to_user_directory, processors=[Transpose(), ResizeToFit(width=1024, upscale=False)])
+	faq = models.ForeignKey(Faq, related_name='image_faq', on_delete=models.CASCADE, blank=True)
 
-    class Meta:
-        verbose_name = 'Фото'
-        verbose_name_plural = 'Фото'
+	class Meta:
+		verbose_name = 'Фото'
+		verbose_name_plural = 'Фото'
 
 class FaqVideo(models.Model):
-    file = models.FileField(upload_to=upload_to_user_directory, verbose_name="Видео")
-    faq = models.ForeignKey(Faq, related_name='video_faq', on_delete=models.CASCADE, blank=True)
+	file = models.FileField(upload_to=upload_to_user_directory, verbose_name="Видео")
+	faq = models.ForeignKey(Faq, related_name='video_faq', on_delete=models.CASCADE, blank=True)
 
-    class Meta:
-        verbose_name = 'Видео'
-        verbose_name_plural = 'Видео'
+	class Meta:
+		verbose_name = 'Видео'
+		verbose_name_plural = 'Видео'
