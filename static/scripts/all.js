@@ -2,9 +2,9 @@
     "use strict";
 
     $(window).load(function(){
-            $(".page-loader div").fadeOut();
-            $(".page-loader").delay(200).fadeOut("slow")
-        })
+          $(".page-loader div").fadeOut();
+          $(".page-loader").delay(200).fadeOut("slow");
+
         init_scroll_navigate();
 
         $(window).trigger("scroll");
