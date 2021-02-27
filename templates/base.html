@@ -1,45 +1,59 @@
-
 <!doctype html>
 <html>
+
 <head>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="amphtml" href="">
-		<meta property="og:type" content="website" />
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<link rel="canonical" href="" />
-		<title>{% block title %}{% endblock %}</title>
-		{% block meta %}{% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="amphtml" href="">
+    <meta property="og:type" content="website" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="canonical" href="" />
+    <title>{% block title %}{% endblock %}</title>
+    {% block meta %}{% endblock %}
 
-    <link rel="stylesheet" type="text/css" href="/static/styles/vendors.min.css">
-
-    <link rel="stylesheet" type="text/css" href="/static/styles/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/static/styles/bootstrap-extended.css">
-    <link rel="stylesheet" type="text/css" href="/static/styles/colors.css">
-		<link rel="stylesheet" type="text/css" href="/static/styles/iconfont.css">
-    <link rel="stylesheet" type="text/css" href="/static/styles/components.css">
-    <link rel="stylesheet" type="text/css" href="/static/styles/dark-layout.css">
-    <link rel="stylesheet" type="text/css" href="/static/styles/vertical-menu.css">
-		<link rel="stylesheet" type="text/css" href="/static/styles/demo.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="/static/styles/style.css">
+    <link type="text/css" rel="stylesheet" href="/static/styles/style-responsive.css">
+    <link type="text/css" rel="stylesheet" href="/static/styles/animate.min.css">
+    <link type="text/css" rel="stylesheet" href="/static/styles/vertical-rhythm.min.css">
+    <link type="text/css" rel="stylesheet" href="/static/styles/owl.carousel.css">
+    <link type="text/css" rel="stylesheet" href="/static/styles/magnific-popup.css">
 </head>
 
-<body>
+<body class="appear-animate">
+    <div class="page-loader">
+        <div class="loader">Loading...</div>
+    </div>
+    <div class="page" id="top">
+        {% block banner %}{% endblock %}
+        {% include "navbar.html" %}
 
-		{% include "navbar.html" %}
+        <span id="ajax">
+            <span id="reload_block">
+                {% block content %}
+                {% endblock %}
+            </span>
+        </span>
 
-			<span id="ajax">
-				<span id="reload_block">
-					{% block content %}
-					{% endblock %}
-				</span>
-			</span>
+        {% include "footer.html" %}
+    </div>
 
-		{% include "footer.html" %}
-
-		<script src="/static/scripts/lib/vendors.min.js"></script>
-		<script defer src="/static/scripts/app-menu.js"></script>
-		<script defer src="/static/scripts/lib/jquery.waypoints.min.js"></script>
-		<script defer src="/static/scripts/lib/infinite.min.js"></script>
-
-		<script defer src="/static/scripts/get.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/static/scripts/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/static/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/SmoothScroll.js"></script>
+    <script type="text/javascript" src="/static/scripts/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/jquery.localScroll.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/jquery.viewport.mini.js"></script>
+    <script type="text/javascript" src="/static/scripts/jquery.appear.js"></script>
+    <script type="text/javascript" src="/static/scripts/jquery.sticky.js"></script>
+    <script type="text/javascript" src="/static/scripts/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="/static/scripts/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/static/scripts/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/jquery.magnific-popup.min.js"></script>>
+    <script type="text/javascript" src="/static/scripts/wow.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/jquery.simple-text-rotator.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/all.js"></script>
 </body>
+
 </html>

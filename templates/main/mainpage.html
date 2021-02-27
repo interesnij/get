@@ -9,8 +9,73 @@
 <meta property="og:site_name" content="" />
 <meta property="og:description" content="" />
 {% endblock %}
+
+{% block banner %}
+<section class="home-section bg-gray bg-light-alfa-50 parallax-2" data-background="images/full-width-images/section-bg-7.jpg" id="home">
+    <div class="js-height-full">
+        <div class="home-content container">
+            <div class="home-text">
+                <h1 class="hs-line-8 no-transp font-alt mb-50 mb-xs-30">
+                    Branding / Design / Development / Photo
+                </h1>
+                <h2 class="hs-line-14 font-alt mb-50 mb-xs-30">
+                    We love design
+                </h2>
+                <div class="local-scroll">
+                    <a href="#about" class="btn btn-mod btn-medium btn-round hidden-xs">See More</a>
+                    <span class="hidden-xs">&nbsp;</span>
+                    <a href="pages-pricing-1.html" class="btn btn-mod btn-medium btn-round">Get Pricing</a>
+                </div>
+            </div>
+        </div>
+        <div class="local-scroll">
+            <a href="#about" class="scroll-down"><i class="fa fa-angle-down scroll-down-icon"></i></a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
 {% block content %}
 
+{% include 'main/about.html' %}
 
+<hr class="mt-0 mb-0 " />
+
+{% include 'main/services.html' %}
+
+<hr class="mt-0 mb-0" />
+
+{% include 'main/process.html' %}
+
+<hr class="mt-0 mb-0" />
+
+{% include 'main/portfolio.html' %}
+
+{% include 'main/action.html' %}
+
+{% include 'main/features.html' %}
+
+{% include 'main/testimonial.html' %}
+
+{% include 'main/shop.html' %}
+
+{% include 'main/principles.html' %}
+
+{% include 'main/blog.html' %}
+
+{% include 'main/newsletter.html' %}
+
+{% include 'main/find.html' %}
+
+<section class="small-section bg-dark">
+    <div class="container relative">
+        <div class="align-center">
+            <h3 class="banner-heading font-alt">Want to discuss your new project?</h3>
+            <div>
+                <a href="" class="btn btn-mod btn-w btn-medium btn-round">Lets tallk</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}
