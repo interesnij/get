@@ -16,11 +16,14 @@ urlpatterns = [
     url(r'^blog_cat/', include('blog_cat.urls')),
     url(r'^blog/', include('blog.urls')),
 
+    url(r'^tags/', include('tags.urls')),
+
     url(r'^search/', include('search.urls')),
     url(r'^users/', include('users.urls')),
 
     url(r'^about/', include('about.urls')),
     url(r'^faq/', include('faq.urls')),
+    url(r'^contacts/', include('contacts.urls')),
 
     url(r'^terms/', include('terms.urls')),
     url(r'^policy/', include('policy.urls')),

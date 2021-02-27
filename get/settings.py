@@ -26,8 +26,7 @@ INSTALLED_APPS = [
     'service',
     'blog_cat',
     'blog',
-    'proects',
-    'friends',
+    'faq',
     'search',
     'users',
     'about',
@@ -36,7 +35,8 @@ INSTALLED_APPS = [
     'policy',
     'main',
     'users',
-    'faq',
+    'tags',
+    'common',
 ]
 
 CKEDITOR_UPLOAD_PATH = 'media/'
