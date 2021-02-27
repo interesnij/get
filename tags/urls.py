@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from news.views import TagView, TagsListView
+from tags.views import TagView, TagsListView
 
 
 urlpatterns = [
