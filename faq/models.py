@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.postgres.indexes import BrinIndex
 from autoslug import AutoSlugField
 from django.conf import settings
+from users.helpers import upload_to_user_directory
+from pilkit.processors import ResizeToFill, ResizeToFit, Transpose
+from imagekit.models import ProcessedImageField
 
 
 class FaqCategory(models.Model):
