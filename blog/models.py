@@ -6,6 +6,7 @@ from pilkit.processors import ResizeToFill, ResizeToFit, Transpose
 from imagekit.models import ProcessedImageField
 from django.db.models import Q
 from users.helpers import upload_to_user_directory
+from autoslug import AutoSlugField
 
 
 class Blog(models.Model):
@@ -15,7 +16,7 @@ class Blog(models.Model):
     description = models.CharField(max_length=500, blank=True, verbose_name="Описание")
     content = models.TextField(verbose_name="content")
     creator = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, on_delete=models.SET_NULL, verbose_name="Создатель")
-    slug = models.SlugField(populate_from='title', unique=True, db_index=True)
+    slug = AutoSlugField(populate_from='title', unique=True, db_index=True)
     category = models.ManyToManyField('blog_cat.BlogCategory', related_name="blog_categories", blank=True, verbose_name="Категория")
 
     class Meta:

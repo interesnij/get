@@ -5,6 +5,7 @@ from django.utils import timezone
 from pilkit.processors import ResizeToFill, ResizeToFit, Transpose
 from imagekit.models import ProcessedImageField
 from users.helpers import upload_to_user_directory
+from autoslug import AutoSlugField
 
 
 class Service(models.Model):
@@ -14,7 +15,7 @@ class Service(models.Model):
     description = models.CharField(max_length=500, blank=True, verbose_name="Описание")
     content = models.TextField(verbose_name="Контент")
     creator = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, on_delete=models.SET_NULL, verbose_name="Создатель")
-    slug = models.SlugField(populate_from='title', unique=True, db_index=True)
+    slug = AutoSlugField(populate_from='title', unique=True, db_index=True)
     category = models.ManyToManyField('service_cat.ServiceCategory', related_name="service_categories", blank=True, verbose_name="Категория")
 
     class Meta:

@@ -1,10 +1,11 @@
 from django.db import models
 from django.contrib.postgres.indexes import BrinIndex
+from autoslug import AutoSlugField
 
 
 class FaqCategory(models.Model):
 	name = models.CharField(max_length=100, verbose_name="Название")
-	slug = models.SlugField(populate_from='name', unique=True, db_index=True)
+	slug = AutoSlugField(populate_from='name', unique=True, db_index=True)
 	order = models.PositiveSmallIntegerField(default=0, verbose_name="Порядковый номер")
 
 	def __str__(self):
@@ -25,7 +26,7 @@ class Faq(models.Model):
 	description = models.CharField(max_length=500, blank=True, verbose_name="Описание")
 	content = models.TextField(verbose_name="content")
 	creator = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, on_delete=models.SET_NULL, verbose_name="Создатель")
-	slug = models.SlugField(populate_from='title', unique=True, db_index=True)
+	slug = AutoSlugField(populate_from='title', unique=True, db_index=True)
 	category = models.ManyToManyField(FaqCategory, related_name="faq_categories", blank=True, verbose_name="Категория")
 
 	class Meta:
