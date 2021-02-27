@@ -3,7 +3,7 @@ from django.db.models import Q
 from autoslug import AutoSlugField
 
 
-class FaqCategory(models.Model):
+class ServiceCategory(models.Model):
 	name = models.CharField(max_length=100, verbose_name="Название")
 	slug = AutoSlugField(populate_from='name', unique=True, db_index=True)
 	order = models.PositiveSmallIntegerField(default=0, verbose_name="Порядковый номер")
