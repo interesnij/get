@@ -7,5 +7,5 @@ class SearchView(TemplateView, CategoryListMixin):
     template_name = None
 
     def get(self,request,*args,**kwargs):
-        self.template_name = get_small_template("search/search.html", request.user, request.META['HTTP_USER_AGENT'])
+        self.template_name = get_small_template("search/search.html", request.META['HTTP_USER_AGENT'])
         return super(SearchView,self).get(request,*args,**kwargs)

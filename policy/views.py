@@ -7,5 +7,5 @@ class PolicyView(TemplateView, CategoryListMixin):
     template_name = None
 
     def get(self,request,*args,**kwargs):
-        self.template_name = get_small_template("policy/policy.html", request.user, request.META['HTTP_USER_AGENT'])
+        self.template_name = get_small_template("policy/policy.html", request.META['HTTP_USER_AGENT'])
         return super(PolicyView,self).get(request,*args,**kwargs)

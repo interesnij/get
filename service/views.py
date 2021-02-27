@@ -10,7 +10,7 @@ class ServiceDetailView(TemplateView, CategoryListMixin):
 
 	def get(self,request,*args,**kwargs):
 		self.service = Service.objects.get(slug=self.kwargs["slug"])
-		self.template_name = get_small_template("service/service.html", request.user, request.META['HTTP_USER_AGENT'])
+		self.template_name = get_small_template("service/service.html", request.META['HTTP_USER_AGENT'])
 		return super(ServiceDetailView,self).get(request,*args,**kwargs)
 
 	def get_context_data(self,**kwargs):
@@ -26,7 +26,7 @@ class ServiceCatView(ListView, CategoryListMixin):
 		from service_cat.models import ServiceCategory
 
 		self.cat = ServiceCatagory.objects.get(slug=self.kwargs["slug"])
-		self.template_name = get_small_template("service/service_list.html", request.user, request.META['HTTP_USER_AGENT'])
+		self.template_name = get_small_template("service/service_list.html", request.META['HTTP_USER_AGENT'])
 		return super(ServiceCatView,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):

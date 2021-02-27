@@ -10,7 +10,7 @@ class BlogDetailView(TemplateView, CategoryListMixin):
 
 	def get(self,request,*args,**kwargs):
 		self.blog = Blog.objects.get(pk=self.kwargs["pk"])
-		self.template_name = get_small_template("blog/blog.html", request.user, request.META['HTTP_USER_AGENT'])
+		self.template_name = get_small_template("blog/blog.html", request.META['HTTP_USER_AGENT'])
 		return super(BlogDetailView,self).get(request,*args,**kwargs)
 
 	def get_context_data(self,**kwargs):
@@ -26,7 +26,7 @@ class BlogCatView(ListView, CategoryListMixin):
 		from blog_cat.models import BlogCategory
 
 		self.cat = BlogCategory.objects.get(slug=self.kwargs["slug"])
-		self.template_name = get_small_template("blog/cat_blog.html", request.user, request.META['HTTP_USER_AGENT'])
+		self.template_name = get_small_template("blog/cat_blog.html", request.META['HTTP_USER_AGENT'])
 		return super(BlogCatView,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):

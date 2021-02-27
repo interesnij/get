@@ -7,5 +7,5 @@ class ContactsView(TemplateView, CategoryListMixin):
     template_name = None
 
     def get(self,request,*args,**kwargs):
-        self.template_name = get_small_template("contacts/contacts.html", request.user, request.META['HTTP_USER_AGENT'])
+        self.template_name = get_small_template("contacts/contacts.html", request.META['HTTP_USER_AGENT'])
         return super(ContactsView,self).get(request,*args,**kwargs)

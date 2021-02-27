@@ -9,7 +9,7 @@ class FaqMainView(ListView, CategoryListMixin):
 	template_name = None
 
 	def get(self,request,*args,**kwargs):
-		self.template_name = get_small_template("faq/faq_main.html", request.user, request.META['HTTP_USER_AGENT'])
+		self.template_name = get_small_template("faq/faq_main.html", request.META['HTTP_USER_AGENT'])
 		return super(BlogDetailView,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):
@@ -22,7 +22,7 @@ class FaqDetailView(TemplateView, CategoryListMixin):
 
 	def get(self,request,*args,**kwargs):
 		self.faq = Faq.objects.get(slug=self.kwargs["slug"])
-		self.template_name = get_small_template("faq/faq.html", request.user, request.META['HTTP_USER_AGENT'])
+		self.template_name = get_small_template("faq/faq.html", request.META['HTTP_USER_AGENT'])
 		return super(FaqDetailView,self).get(request,*args,**kwargs)
 
 	def get_context_data(self,**kwargs):
@@ -36,7 +36,7 @@ class FaqCatView(ListView, CategoryListMixin):
 
 	def get(self,request,*args,**kwargs):
 		self.cat = FaqCategory.objects.get(slug=self.kwargs["slug"])
-		self.template_name = get_small_template("faq/faq_list.html", request.user, request.META['HTTP_USER_AGENT'])
+		self.template_name = get_small_template("faq/faq_list.html", request.META['HTTP_USER_AGENT'])
 		return super(FaqCatView,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):

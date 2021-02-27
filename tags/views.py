@@ -10,7 +10,7 @@ class TagView(TemplateView, CategoryListMixin):
 
 	def get(self,request,*args,**kwargs):
 		self.tag = Tag.objects.get(name=self.kwargs["name"])
-		self.template_name = get_small_template("tags/tag.html", request.user, request.META['HTTP_USER_AGENT'])
+		self.template_name = get_small_template("tags/tag.html", request.META['HTTP_USER_AGENT'])
 		return super(TagView,self).get(request,*args,**kwargs)
 
 	def get_context_data(self,**kwargs):
@@ -23,7 +23,7 @@ class TagsListView(ListView, CategoryListMixin):
 	template_name, paginate_by = None, 50
 
 	def get(self,request,*args,**kwargs):
-		self.template_name = get_small_template("tags/tags.html", request.user, request.META['HTTP_USER_AGENT'])
+		self.template_name = get_small_template("tags/tags.html", request.META['HTTP_USER_AGENT'])
 		return super(TagsListView,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):
