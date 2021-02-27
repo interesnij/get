@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.postgres.indexes import BrinIndex
 from autoslug import AutoSlugField
+from django.conf import settings
 
 
 class FaqCategory(models.Model):
