@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from faq.views import FormsView
+from faq.views import *
 
 
 urlpatterns = [
