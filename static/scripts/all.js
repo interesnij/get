@@ -10,7 +10,6 @@
         $(window).trigger("scroll");
         $(window).trigger("resize");
 
-        // Hash menu forwarding
         if ((window.location.hash) && ($(window.location.hash).length)){
             var hash_offset = $(window.location.hash).offset().top;
             $("html, body").animate({
