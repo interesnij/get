@@ -18,9 +18,6 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'django.contrib.sites',
     'rest_framework',
-    'rest_framework.authtoken',
-    'ckeditor',
-    'ckeditor_uploader',
 
     'service_cat',
     'service',
@@ -28,7 +25,6 @@ INSTALLED_APPS = [
     'blog',
     'faq',
     'search',
-    'users',
     'about',
     'contacts',
     'terms',
