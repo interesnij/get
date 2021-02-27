@@ -2,6 +2,7 @@ from generic.mixins import CategoryListMixin
 from django.views.generic import ListView
 from faq.models import *
 from common.utils import get_small_template
+from django.views.generic.base import TemplateView
 
 
 class FaqMainView(ListView, CategoryListMixin):
