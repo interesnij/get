@@ -2,7 +2,7 @@ from django.views.generic.base import ContextMixin
 from django.conf import settings
 from blog_cat.models import BlogCategory
 from service_cat.models import ServiceCategory
-from faq.models import ServiceCategory
+from faq.models import FaqCategory
 
 
 class CategoryListMixin(ContextMixin):
