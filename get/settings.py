@@ -23,6 +23,8 @@ INSTALLED_APPS = [
     'service',
     'blog_cat',
     'blog',
+    'works_cat',
+    'works',
     'faq',
     'search',
     'about',

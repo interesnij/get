@@ -16,6 +16,9 @@ urlpatterns = [
     url(r'^blog_cat/', include('blog_cat.urls')),
     url(r'^blog/', include('blog.urls')),
 
+    url(r'^works_cat/', include('works_cat.urls')),
+    url(r'^works/', include('works.urls')),
+
     url(r'^tags/', include('tags.urls')),
 
     url(r'^search/', include('search.urls')),

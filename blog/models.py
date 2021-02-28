@@ -35,6 +35,20 @@ class Blog(models.Model):
         from django.contrib.humanize.templatetags.humanize import naturaltime
         return naturaltime(self.created)
 
+    def is_have_docs(self):
+        return self.doc_blog.filter(blog_id=self.pk).exists()
+    def is_have_images(self):
+        return self.image_blog.filter(blog_id=self.pk).exists()
+    def is_have_videos(self):
+        return self.video_blog.filter(blog_id=self.pk).exists()
+
+    def get_docs(self):
+        return self.doc_blog.filter(blog_id=self.pk)
+    def get_images(self):
+        return self.image_blog.filter(blog_id=self.pk)
+    def get_videos(self):
+        return self.video_blog.filter(blog_id=self.pk)
+
 
 class BlogDoc(models.Model):
     title = models.CharField(max_length=200, verbose_name="Название")

@@ -11,156 +11,102 @@
         <div class="inner-nav desktop-nav">
             <ul class="clearlist">
                 <li>
-                    <a href="{% url 'main' %}" class="active">Главная <i class="fa fa-angle-down"></i></a>
+                    <a href="{% url 'main' %}" class="ajax">Главная</a>
                 </li>
                 <li>
-                    <a href="#" class="mn-has-sub">Услуги <i class="fa fa-angle-down"></i></a>
+                    <a href="{% url 'service_cats' %}" class="ajax">Услуги <i class="fa fa-angle-down mn-has-sub"></i></a>
                     <ul class="mn-sub mn-has-multi">
+                      {% for object in service_cats %}
                         <li class="mn-sub-multi">
-                            <a class="mn-group-title">Разработка</a>
+                            <a class="mn-group-title ajax" href="{% url 'service_list' slug=object.slug %}">{{ object.name }}</a>
                             <ul>
+                              {% for service in object.get_service_10 %}
                                 <li>
-                                    <a href="">Социальные сети</a>
+                                    <a class="ajax" href="{% url 'service' slug=service.slug %}">{{ service.title }}</a>
                                 </li>
-                                <li>
-                                    <a href="">Корпоративные сети</a>
-                                </li>
-                                <li>
-                                    <a href="">Веб-порталы</a>
-                                </li>
-                                <li>
-                                    <a href="">Бизнес-площадки <span class="label-new round">New</span></a>
-                                </li>
+                              {% endfor %}
                             </ul>
                         </li>
-                        <li class="mn-sub-multi">
-                            <a class="mn-group-title">Продажа</a>
-                            <ul>
-                                <li>
-                                    <a href="">Аналог Вконтакте</a>
-                                </li>
-                                <li>
-                                    <a href="">Аналог Авито <span class="label-new round">Новое</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mn-sub-multi">
-                            <a class="mn-group-title">Обучение</a>
-                            <ul>
-                                <li>
-                                    <a href="pages-gallery-1col.html">Курс "Веб-порталы"</a>
-                                </li>
-                                <li>
-                                    <a href="pages-gallery-2col.html">Курс "Корпоративные сети"</a>
-                                </li>
-                                <li>
-                                    <a href="pages-gallery-3col.html">Курс "Бизнес-площадки"</a>
-                                </li>
-                                <li>
-                                    <a href="pages-gallery-4col.html">Курс "Социальные сети"</a>
-                                </li>
-                            </ul>
-                        </li>
+                      {% endfor %}
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="mn-has-sub">Портфолио <i class="fa fa-angle-down"></i></a>
+                    <a href="{% url 'works_cats' %}" class="ajax">Портфолио <i class="fa fa-angle-down mn-has-sub"></i></a>
                     <ul class="mn-sub">
-                        <li>
-                            <a href="#" class="mn-has-sub">Категория <i class="fa fa-angle-right right"></i></a>
-                            <ul class="mn-sub">
+                      {% for object in works_cats %}
+                        <li class="mn-sub-multi">
+                            <a class="mn-group-title ajax" href="{% url 'works_list' slug=object.slug %}">{{ object.name }}</a>
+                            <ul>
+                              {% for work in object.get_works_10 %}
                                 <li>
-                                    <a href="">Работа</a>
+                                    <a class="ajax" href="{% url 'work' slug=work.slug %}">{{ work.title }}</a>
                                 </li>
-                                <li>
-                                    <a href="">Работа</a>
-                                </li>
-                                <li>
-                                    <a href="">Работа</a>
-                                </li>
+                              {% endfor %}
                             </ul>
                         </li>
-                        <li>
-                            <a href="#" class="mn-has-sub">Категория <i class="fa fa-angle-right right"></i></a>
-                            <ul class="mn-sub">
-                                <li>
-                                    <a href="">Работа</a>
-                                </li>
-                                <li>
-                                    <a href="">Работа</a>
-                                </li>
-                            </ul>
-                        </li>
+                      {% endfor %}
                     </ul>
                 </li>
 
                 <li>
-                    <a href="#" class="mn-has-sub">База знаний <i class="fa fa-angle-down"></i></a>
+                    <a href="{% url 'faq_cats' %}" class="ajax">База знаний <i class="fa fa-angle-down mn-has-sub"></i></a>
                     <ul class="mn-sub">
-                        <li>
-                            <a href="#" class="mn-has-sub">Категория <i class="fa fa-angle-right right"></i></a>
-                            <ul class="mn-sub">
+                      {% for object in faq_cats %}
+                        <li class="mn-sub-multi">
+                            <a class="mn-group-title ajax" href="{% url 'faq_list' slug=object.slug %}">{{ object.name }}</a>
+                            <ul>
+                              {% for work in object.get_works_10 %}
                                 <li>
-                                    <a href="">Статья</a>
+                                    <a class="ajax" href="{% url 'faq' slug=work.slug %}">{{ work.title }}</a>
                                 </li>
-                                <li>
-                                    <a href="">Статья</a>
-                                </li>
+                              {% endfor %}
                             </ul>
                         </li>
-                        <li>
-                            <a href="#" class="mn-has-sub">Категория <i class="fa fa-angle-right right"></i></a>
-                            <ul class="mn-sub">
-                                <li>
-                                    <a href="">Статья</a>
-                                </li>
-                                <li>
-                                    <a href="">Статья</a>
-                                </li>
-                            </ul>
-                        </li>
+                      {% endfor %}
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="mn-has-sub">Блог <i class="fa fa-angle-down"></i></a>
+                    <a href="{% url 'blog_cats' %}" class="ajax">Блог <i class="fa fa-angle-down  mn-has-sub"></i></a>
                     <ul class="mn-sub to-left">
+                      {% for object in blog_cats %}
                         <li>
-                            <a href="">Категория</a>
+                            <a class="ajax" href="{% url 'blog_list' slug=object.slug %}">Категория</a>
                         </li>
-                        <li>
-                            <a href="">Категория</a>
-                        </li>
+                      {% endfor %}
                     </ul>
+                </li>
+                <li>
+                    <a href="{% url 'tags' %}" class="ajax">Теги</a>
                 </li>
                 <li>
                     <a href="#" class="mn-has-sub">Инфо <i class="fa fa-angle-down"></i></a>
                     <ul class="mn-sub to-left">
                         <li>
-                            <a href="">Команда</a>
+                            <a class="ajax" href="">Команда</a>
                         </li>
                         <li>
-                            <a href="">Сайт</a>
+                            <a class="ajax" href="{% url 'about' %}">Сайт</a>
                         </li>
                         <li>
-                            <a href="">Сотрудничество</a>
+                            <a class="ajax" href="">Сотрудничество</a>
                         </li>
                         <li>
-                            <a href="">Контакты</a>
+                            <a class="ajax" href="{% url 'contacts' %}">Контакты</a>
                         </li>
                     </ul>
                 </li>
                 <li><a>&nbsp;</a></li>
                 <li>
-                    <a href="#" class="mn-has-sub"><i class="fa fa-search"></i> Search</a>
+                    <a href="#" class="mn-has-sub"><i class="fa fa-search"></i> поиск</a>
                     <ul class="mn-sub">
                         <li>
                             <div class="mn-wrap">
                                 <form method="post" class="form">
                                     <div class="search-wrap">
-                                        <button class="search-button animate" type="submit" title="Start Search">
+                                        <button class="search-button animate" type="submit" title="Поиск">
                                             <i class="fa fa-search"></i>
                                         </button>
-                                        <input type="text" class="form-control search-field" placeholder="Search...">
+                                        <input type="text" class="form-control search-field" placeholder="Поиск...">
                                     </div>
                                 </form>
                             </div>

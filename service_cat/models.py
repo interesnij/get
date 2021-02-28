@@ -13,19 +13,19 @@ class ServiceCategory(models.Model):
 
 	class Meta:
 		ordering = ["order", "name"]
-		verbose_name = "категория faq"
-		verbose_name_plural = "категории faq"
+		verbose_name = "категория услуг"
+		verbose_name_plural = "категории услуг"
 
 	def __str__(self):
 		return self.name
 
-	def is_faq_exists(self):
-		return self.faq_categories.filter(category=self).values("pk").exists()
+	def is_service_exists(self):
+		return self.service_categories.filter(category=self).values("pk").exists()
 
-	def get_faq_10(self):
-		list = self.faq_categories.filter(category=self)[:10]
+	def get_service_10(self):
+		list = self.service_categories.filter(category=self)[:10]
 		return list
 
-	def get_faq(self):
-		list = self.faq_categories.filter(category=self)
+	def get_service(self):
+		list = self.service_categories.filter(category=self)
 		return list
