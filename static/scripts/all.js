@@ -4,7 +4,6 @@
     $(window).load(function(){
           $(".page-loader div").fadeOut();
           $(".page-loader").delay(200).fadeOut("slow");
-        init_scroll_navigate();
 
         $(window).trigger("scroll");
         $(window).trigger("resize");
@@ -124,7 +123,6 @@
         }
 
         $(window).scroll(function(){
-
                 if ($(window).scrollTop() > 10) {
                     $(".js-transparent").removeClass("transparent");
                     $(".main-nav, .nav-logo-wrap .logo, .mobile-nav").addClass("small-height");
@@ -137,10 +135,7 @@
 
         });
 
-        // Mobile menu toggle
-
         mobile_nav.click(function(){
-
             if (desktop_nav.hasClass("js-opened")) {
                 desktop_nav.slideUp("slow", "easeOutExpo").removeClass("js-opened");
                 $(this).removeClass("active");
@@ -148,12 +143,6 @@
             else {
                 desktop_nav.slideDown("slow", "easeOutQuart").addClass("js-opened");
                 $(this).addClass("active");
-
-                // Fix for responsive menu
-                if ($(".main-nav").hasClass("not-top")){
-                    $(window).scrollTo(".main-nav", "slow");
-                }
-
             }
 
         });
