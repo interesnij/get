@@ -11,10 +11,10 @@ function service_tab_action(is, tab_class){
   cur.classList.add("active")
 }}
 
-function banner_height_init(){
+function banner_height_init(block){
   console.log(window.innerHeight)
-  if (document.body.querySelector(".js-height-full")){
-        document.body.querySelector(".js-height-full").style.height = window.innerHeight
+  if (block.querySelector(".js-height-full")){
+        block.querySelector(".js-height-full").style.height = window.innerHeight
     }
 };
 
@@ -34,7 +34,7 @@ function ajax_get_reload(url) {
         window.scrollTo(0,0);
         document.title = elem_.querySelector('title').innerHTML;
         window.history.pushState({route: url}, "network", url);
-        banner_height_init();
+        banner_height_init("#ajax");
       }
     }
     ajax_link.send();
