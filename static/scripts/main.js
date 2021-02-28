@@ -34,7 +34,7 @@ function ajax_get_reload(url) {
         window.scrollTo(0,0);
         document.title = elem_.querySelector('title').innerHTML;
         window.history.pushState({route: url}, "network", url);
-        banner_height_init(rtr.querySelector("#ajax"));
+        banner_height_init(rtr);
       }
     }
     ajax_link.send();
