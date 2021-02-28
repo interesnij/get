@@ -6,6 +6,7 @@ class Tag(models.Model):
     blog = models.ManyToManyField("blog.Blog", blank=True, related_name='blog_tags')
     faq = models.ManyToManyField("faq.Faq", blank=True, related_name='blog_faqs')
     service = models.ManyToManyField("service.Service", blank=True, related_name='service_tags')
+    work = models.ManyToManyField("works.Works", blank=True, related_name='works_tags')
 
     class Meta:
         verbose_name = "тег"
