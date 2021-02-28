@@ -14,8 +14,7 @@ function service_tab_action(is, tab_class){
 function banner_height_init(block){
   console.log(block);
   if (block.querySelector(".js-height-full")){
-        block.querySelector(".js-height-full").style.height = window.innerHeight;
-        block.querySelector(".js-height-full").style.height = "700px"
+        block.querySelector(".js-height-full").style.height = window.innerHeight + "px";
     }
 };
 
@@ -61,6 +60,6 @@ on('body', 'click', '.ajax', function(event) {
   event.preventDefault();
   var url = this.getAttribute('href');
   if (url != window.location.pathname){
-    ajax_get_reload(url)
+    ajax_get_reload(url, )
   } else {toast_info("Вы уже на этой странице")}
 })
