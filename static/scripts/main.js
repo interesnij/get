@@ -12,14 +12,9 @@ function service_tab_action(is, tab_class){
 }}
 
 function js_height_init(){
-    (function($){
-        $(".js-height-full").height($(window).height());
-        $(".js-height-parent").each(function(){
-            $(this).height($(this).parent().first().height());
-            console.log($(".js-height-full").height($(window).height()))
-            console.log($(this).height($(this).parent().first().height()));
-        });
-    })(jQuery);
+  if (document.body.querySelector(".js-height-full")){
+        document.body.querySelector(".js-height-full").style.height = window.innerHeight
+    }
 }
 
 function on(elSelector, eventName, selector, fn) {var element = document.querySelector(elSelector);element.addEventListener(eventName, function(event) {var possibleTargets = element.querySelectorAll(selector);var target = event.target;for (var i = 0, l = possibleTargets.length; i < l; i++) {var el = target;var p = possibleTargets[i];while (el && el !== element) {if (el === p) {return fn.call(p, event);}el = el.parentNode;}}});};
