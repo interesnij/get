@@ -11,7 +11,7 @@ function service_tab_action(is, tab_class){
   cur.classList.add("active")
 }}
 
-function js_height_init(){
+function banner_height_init(){
   if (document.body.querySelector(".js-height-full")){
         document.body.querySelector(".js-height-full").style.height = window.innerHeight
     }
@@ -33,7 +33,7 @@ function ajax_get_reload(url) {
         window.scrollTo(0,0);
         document.title = elem_.querySelector('title').innerHTML;
         window.history.pushState({route: url}, "network", url);
-        js_height_init();
+        banner_height_init();
       }
     }
     ajax_link.send();
