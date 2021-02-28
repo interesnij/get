@@ -460,12 +460,12 @@ function service_tab_action(is, tab_class){
   if (!is.classList.contains("active")){
   nav = is.parentElement;
   nav_items = nav.querySelectorAll(".yy");
-  for (var i = 0; i < nav_items.length; i++){nav_items[i].classList.remove("active")};
+  for (var i = 0; i < nav_items.length; i++){nav_items[i].classList.remove("active"); nav_items[i].classList.add("pointer")};
   is.classList.add("active");
   tabs = nav.nextElementSibling;
   tabs_items = tabs.querySelectorAll(".tab-pane");
   for (var i = 0; i < tabs_items.length; i++){tabs_items[i].classList.remove("active")};
-  tabs.querySelector(tab_class).classList.add("active");
+  tabs.querySelector(tab_class).classList.add("active"); nav_items[i].classList.remove("pointer");
 }}
 
 function on(elSelector, eventName, selector, fn) {var element = document.querySelector(elSelector);element.addEventListener(eventName, function(event) {var possibleTargets = element.querySelectorAll(selector);var target = event.target;for (var i = 0, l = possibleTargets.length; i < l; i++) {var el = target;var p = possibleTargets[i];while (el && el !== element) {if (el === p) {return fn.call(p, event);}el = el.parentNode;}}});};
