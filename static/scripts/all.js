@@ -398,15 +398,15 @@
         })(jQuery);
     }
 
-function js_height_init(){
-    (function($){
-        $(".js-height-full").height($(window).height());
-        $(".js-height-parent").each(function(){
-            $(this).height($(this).parent().first().height());
-        });
-    })(jQuery);
-}
-
+    function js_height_init(){
+        (function($){
+            $(".js-height-full").height($(window).height());
+            $(".js-height-parent").each(function(){
+                $(this).height($(this).parent().first().height());
+            });
+        })(jQuery);
+    }
+    
 function init_wow(){
     (function($){
         var wow = new WOW({

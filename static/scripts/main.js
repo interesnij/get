@@ -11,6 +11,15 @@ function service_tab_action(is, tab_class){
   cur.classList.add("active")
 }}
 
+function js_height_init(){
+    (function($){
+        $(".js-height-full").height($(window).height());
+        $(".js-height-parent").each(function(){
+            $(this).height($(this).parent().first().height());
+        });
+    })(jQuery);
+}
+
 function on(elSelector, eventName, selector, fn) {var element = document.querySelector(elSelector);element.addEventListener(eventName, function(event) {var possibleTargets = element.querySelectorAll(selector);var target = event.target;for (var i = 0, l = possibleTargets.length; i < l; i++) {var el = target;var p = possibleTargets[i];while (el && el !== element) {if (el === p) {return fn.call(p, event);}el = el.parentNode;}}});};
 
 function ajax_get_reload(url) {
@@ -27,8 +36,7 @@ function ajax_get_reload(url) {
         window.scrollTo(0,0);
         document.title = elem_.querySelector('title').innerHTML;
         window.history.pushState({route: url}, "network", url);
-        init_team();
-        init_wow();
+        js_height_init();
       }
     }
     ajax_link.send();
