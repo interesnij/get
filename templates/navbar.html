@@ -14,7 +14,7 @@
                     <a href="{% url 'main' %}" class="ajax">Главная</a>
                 </li>
                 <li>
-                    <a href="{% url 'service_cats' %}" class="ajax">Услуги <i class="fa fa-angle-down mn-has-sub"></i></a>
+                    <a href="{% url 'service_cats' %}" class="mn-has-sub">Услуги <i class="fa fa-angle-down"></i></a>
                     <ul class="mn-sub mn-has-multi">
                       {% for object in service_cats %}
                         <li class="mn-sub-multi">
@@ -31,7 +31,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="{% url 'works_cats' %}" class="ajax">Портфолио <i class="fa fa-angle-down mn-has-sub"></i></a>
+                    <a href="{% url 'works_cats' %}" class="mn-has-sub">Портфолио <i class="fa fa-angle-down"></i></a>
                     <ul class="mn-sub">
                       {% for object in works_cats %}
                         <li class="mn-sub-multi">
@@ -49,7 +49,7 @@
                 </li>
 
                 <li>
-                    <a href="{% url 'faq_cats' %}" class="ajax">База знаний <i class="fa fa-angle-down mn-has-sub"></i></a>
+                    <a href="{% url 'faq_cats' %}" class="mn-has-sub">База знаний <i class="fa fa-angle-down"></i></a>
                     <ul class="mn-sub">
                       {% for object in faq_cats %}
                         <li class="mn-sub-multi">
@@ -66,7 +66,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="{% url 'blog_cats' %}" class="ajax">Блог <i class="fa fa-angle-down  mn-has-sub"></i></a>
+                    <a href="{% url 'blog_cats' %}" class="mn-has-sub">Блог <i class="fa fa-angle-down"></i></a>
                     <ul class="mn-sub to-left">
                       {% for object in blog_cats %}
                         <li>
@@ -98,7 +98,7 @@
                 <li><a>&nbsp;</a></li>
                 <li>
                     <a href="#" class="mn-has-sub"><i class="fa fa-search"></i> поиск</a>
-                    <ul class="mn-sub">
+                    <ul class="mn-sub to-left">
                         <li>
                             <div class="mn-wrap">
                                 <form method="post" class="form">
