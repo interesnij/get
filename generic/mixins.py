@@ -11,7 +11,7 @@ class CategoryListMixin(ContextMixin):
 		context = super(CategoryListMixin,self).get_context_data(**kwargs)
 		context["current_url"] = self.request.path
 		context["blog_cat"] = BlogCategory.objects.filter(blog_categories__isnull=False)
-		context["service_cats"] = ServiceCategory.objects.filter(service_categories__isnull=False)
+		context["service_cats"] = ServiceCategory.objects.all()
 		context["faq_cat"] = FaqCategory.objects.filter(faq_categories__isnull=False)
 		context["works_cat"] = WorksCategory.objects.filter(works_categories__isnull=False)
 		return context
