@@ -5,7 +5,7 @@ from common.utils import get_small_template
 
 
 class UserView(TemplateView, CategoryListMixin):
-	template_name = "profile/user.html"
+	template_name = "users/user.html"
 
 	def get(self,request,*args,**kwargs):
 		self.user = User.objects.get(pk=self.kwargs["pk"])

@@ -25,7 +25,7 @@ class ServiceCatView(ListView, CategoryListMixin):
 	def get(self,request,*args,**kwargs):
 		from service_cat.models import ServiceCategory
 
-		self.cat = ServiceCatagory.objects.get(slug=self.kwargs["slug"])
+		self.cat = ServiceCategory.objects.get(slug=self.kwargs["slug"])
 		self.template_name = get_small_template("service/service_list.html", request.META['HTTP_USER_AGENT'])
 		return super(ServiceCatView,self).get(request,*args,**kwargs)
 

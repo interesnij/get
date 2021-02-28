@@ -26,7 +26,7 @@ class WorksCatView(ListView, CategoryListMixin):
 		from works_cat.models import WorksCategory
 
 		self.cat = WorksCategory.objects.get(slug=self.kwargs["slug"])
-		self.template_name = get_small_template("works/cat_work.html", request.META['HTTP_USER_AGENT'])
+		self.template_name = get_small_template("works/works_list.html", request.META['HTTP_USER_AGENT'])
 		return super(WorksCatView,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):

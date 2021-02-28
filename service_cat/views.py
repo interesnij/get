@@ -9,7 +9,7 @@ class ServiceCatList(ListView, CategoryListMixin):
 	paginate_by = 20
 
 	def get(self,request,*args,**kwargs):
-		self.template_name = get_small_template("service/cats_index.html", request.META['HTTP_USER_AGENT'])
+		self.template_name = get_small_template("service/service_cats.html", request.META['HTTP_USER_AGENT'])
 		return super(ServiceCatList,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):

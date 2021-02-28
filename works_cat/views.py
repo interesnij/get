@@ -10,7 +10,7 @@ class WorksListView(ListView, CategoryListMixin):
 	paginate_by = 20
 
 	def get(self,request,*args,**kwargs):
-		self.template_name = get_small_template("works/works_index.html", request.META['HTTP_USER_AGENT'])
+		self.template_name = get_small_template("works/works_cats.html", request.META['HTTP_USER_AGENT'])
 		return super(WorksListView,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):
