@@ -462,7 +462,7 @@ function service_tab_action(is, tab_class){
   nav_items = nav.querySelectorAll(".yy");
   for (var i = 0; i < nav_items.length; i++){nav_items[i].classList.remove("active")};
   is.classList.add("active");
-  tabs = is.previousElementSibling;
+  tabs = is.nextElementSibling;
   tabs_items = tabs.querySelectorAll(".tab-pane");
   for (var i = 0; i < tabs_items.length; i++){tabs_items[i].classList.remove("active")};
   tabs.querySelector(tab_class).add("active");
