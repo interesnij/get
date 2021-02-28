@@ -16,7 +16,7 @@ function js_height_init(){
         $(".js-height-full").height($(window).height());
         $(".js-height-parent").each(function(){
             $(this).height($(this).parent().first().height());
-            console.log($(".js-height-full").height($(window).height());)
+            console.log($(".js-height-full").height($(window).height()))
             console.log($(this).height($(this).parent().first().height()));
         });
     })(jQuery);
