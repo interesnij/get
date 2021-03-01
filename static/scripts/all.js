@@ -91,9 +91,6 @@
     }
 
     function init_classic_menu(){
-        $(".js-stick").sticky({
-            topSpacing: 0
-        });
         height_line($(".inner-nav > ul > li > a"), $(".main-nav"));
         height_line(mobile_nav, $(".main-nav"));
 
