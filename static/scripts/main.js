@@ -150,5 +150,5 @@ on('body', 'click', '.ajax', function(event) {
   } else {toast_info("Вы уже на этой странице")}
 })
 
-ajax = document.body.getElementById("ajax");
+ajax = document.body.querySelector("#ajax");
 banner_height_init(ajax);
