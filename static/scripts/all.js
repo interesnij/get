@@ -30,7 +30,7 @@
         init_classic_menu_resize();
         //init_side_panel_resize()
         js_height_init();
-        //split_height_init();
+        split_height_init();
     });
     var mobileTest;
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
