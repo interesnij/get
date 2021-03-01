@@ -61,14 +61,6 @@
         document.documentElement.className += " no-touch";
     }
 
-    var pageSection = $(".home-section, .page-section, .small-section, .split-section");
-    pageSection.each(function(indx){
-
-        if ($(this).attr("data-background")){
-            $(this).css("background-image", "url(" + $(this).data("background") + ")");
-        }
-    });
-
     function height_line(height_object, height_donor){
         height_object.height(height_donor.height());
         height_object.css({
@@ -406,7 +398,7 @@
             });
         })(jQuery);
     }
-    
+
 function init_wow(){
     (function($){
         var wow = new WOW({
