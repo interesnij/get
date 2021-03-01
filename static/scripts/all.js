@@ -19,18 +19,18 @@
     $(document).ready(function(){
         $(window).trigger("resize");
         init_classic_menu();
-        init_fullscreen_menu();
+        //init_fullscreen_menu();
         //init_side_panel();
         //init_shortcodes();
-        init_team();
+        //init_team();
         init_wow();
     });
 
     $(window).resize(function(){
         init_classic_menu_resize();
-        init_side_panel_resize()
+        //init_side_panel_resize()
         js_height_init();
-        split_height_init();
+        //split_height_init();
     });
     var mobileTest;
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
@@ -96,11 +96,9 @@
     }
 
     function init_classic_menu(){
-
         $(".js-stick").sticky({
             topSpacing: 0
         });
-
         height_line($(".inner-nav > ul > li > a"), $(".main-nav"));
         height_line(mobile_nav, $(".main-nav"));
 
@@ -182,53 +180,6 @@
             }
         });
     }
-    function init_shortcodes(){
-        var tpl_tab_height;
-        $(".tpl-minimal-tabs > li > a").click(function(){
-            if (!($(this).parent("li").hasClass("active"))) {
-                tpl_tab_height = $(".tpl-minimal-tabs-cont > .tab-pane").filter($(this).attr("href")).height();
-                $(".tpl-minimal-tabs-cont").animate({
-                    height: tpl_tab_height
-                }, function(){
-                    $(".tpl-minimal-tabs-cont").css("height", "auto");
-                });
-            }
-        });
-
-        $(".accordion").each(function(){
-            var allPanels = $(this).children("dd").hide();
-            $(this).children("dd").first().slideDown("easeOutExpo");
-            $(this).children("dt").children("a").first().addClass("active");
-
-            $(this).children("dt").children("a").click(function(){
-                var current = $(this).parent().next("dd");
-                $(".accordion > dt > a").removeClass("active");
-                $(this).addClass("active");
-                allPanels.not(current).slideUp("easeInExpo");
-                $(this).parent().next().slideDown("easeOutExpo");
-                return false;
-            });
-
-         });
-
-        var allToggles = $(".toggle > dd").hide();
-
-        $(".toggle > dt > a").click(function(){
-            if ($(this).hasClass("active")) {
-                $(this).parent().next().slideUp("easeOutExpo");
-                $(this).removeClass("active");
-            }
-            else {
-                var current = $(this).parent().next("dd");
-                $(this).addClass("active");
-                $(this).parent().next().slideDown("easeOutExpo");
-            }
-            return false;
-        });
-        $(".video, .resp-media, .blog-media").fitVids();
-        $(".work-full-media").fitVids();
-    }
-
     function init_team(){
         $(".team-item").click(function(){
             if ($("html").hasClass("mobile")) {
