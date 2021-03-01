@@ -149,3 +149,6 @@ on('body', 'click', '.ajax', function(event) {
     ajax_get_reload(url)
   } else {toast_info("Вы уже на этой странице")}
 })
+
+ajax = document.body.getElementById("ajax");
+banner_height_init(ajax);
