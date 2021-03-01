@@ -1351,6 +1351,8 @@ a.logo:hover{
     vertical-align: middle;
     text-align: center;
     font-size: 21px;
+    font-weight: bold;
+    color: black;
 }
 
 .mobile-on .mn-has-multi{

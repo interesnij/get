@@ -25,7 +25,9 @@ a, b, div, ul, li{
 body{
     color: #111;
 }
-
+.mobile-nav .fa {
+    color: black;
+}
 a{
     color: #111;
 }
