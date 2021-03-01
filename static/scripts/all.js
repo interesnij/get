@@ -20,8 +20,8 @@
         $(window).trigger("resize");
         init_classic_menu();
         init_fullscreen_menu();
-        init_side_panel();
-        init_shortcodes();
+        //init_side_panel();
+        //init_shortcodes();
         init_team();
         init_wow();
     });
