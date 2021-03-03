@@ -28,4 +28,7 @@ on('body', 'click', '.ajax', function(event) {
 
 on('body', 'mouseover', '.mn-has-sub', function(event) {
   this.nextElementSibling.style.display = "block"
+});
+on('body', 'mouseout', '.mn-has-sub', function(event) {
+  this.nextElementSibling.style.display = "none"
 })

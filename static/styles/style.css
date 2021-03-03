@@ -1099,6 +1099,7 @@ a.logo:hover{
     display: inline-block;
     position: relative;
     float: right;
+    margin-top: 10px;
 }
 .inner-nav ul{
     float: right;
