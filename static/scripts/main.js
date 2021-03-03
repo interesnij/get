@@ -35,3 +35,6 @@ on('body', 'mouseover', '.mn-sub', function(event) {
 on('body', 'mouseout', '.mn-has-sub', function(event) {
   this.nextElementSibling.style.display = "none"
 })
+on('body', 'mouseout', '.mn-sub', function(event) {
+  this.style.display = "none"
+})
