@@ -101,6 +101,7 @@ function banner_height_init(block){
   console.log(block);
   if (block.querySelector(".js-height-full")){
         block.querySelector(".js-height-full").style.height = window.innerHeight + "px";
+        window.scrollTo(0,0);
     }
 };
 
