@@ -31,5 +31,5 @@ on('body', 'mouseover', '.mn-has-sub', function(event) {
 
 });
 on('body', 'mouseout', '.mn-has-sub', function(event) {
-  this.nextElementSibling.style.display = "none"
+  setTimeout(this.nextElementSibling.style.display = "none", 2000);
 })
