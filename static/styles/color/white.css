@@ -2,12 +2,21 @@
 ::-webkit-selection{ color: #fff !important; background:#000 !important; }
 ::selection{ color: #fff !important; background:#000 !important; }
 
+
+.svg_default {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+.border {
+    border: 1px solid rgba(127,127,127, 0.7) !important;
+}
 .shadow{
     -webkit-box-shadow: 0px 0px 200px rgba(255, 255, 255, .2);
     -moz-box-shadow: 0px 0px 200px rgba(255, 255, 255, .2);
     box-shadow: 0px 0px 200px rgba(255, 255, 255, .2);
 }
-
+.svg_info {
+    width: 22px;
+}
 a, b, div, ul, li{
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
