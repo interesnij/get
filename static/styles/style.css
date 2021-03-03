@@ -27,9 +27,13 @@
   height: 100%;
   -webkit-animation: show 0.5s;
           animation: show 0.5s;
-  padding: 10px 0;
+  padding: 5px;
+  line-height: 15px;
 }
-
+.mobile_icon p{
+  margin-left: 0;
+  font-size: 11px;
+}
 .align-center{ text-align:center !important; }
 .align-left{ text-align:left !important;}
 .align-right{ text-align:right !important; }
