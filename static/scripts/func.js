@@ -126,3 +126,14 @@ function ajax_get_reload(url) {
     }
     ajax_link.send();
 }
+
+function init_wow(){
+    var wow = new WOW({
+      boxClass: 'wow',
+      animateClass: 'animated',
+      offset: 90,
+      mobile: false,
+      live: true
+  });
+  wow.init();
+}

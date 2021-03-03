@@ -38,18 +38,3 @@
         })
     }(jQuery);
 })(jQuery);
-
-function init_wow(){
-    (function($){
-        var wow = new WOW({
-            boxClass: 'wow',
-            animateClass: 'animated',
-            offset: 90,
-            mobile: false,
-            live: true
-        });
-        if ($("body").hasClass("appear-animate")){
-           wow.init();
-        }
-    })(jQuery);
-}
