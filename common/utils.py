@@ -11,7 +11,7 @@ def try_except(value):
 
 def get_small_template(template_name, user_agent):
     if MOBILE_AGENT_RE.match(user_agent):
-        template_name = template_name
+        template_name = "mobile/" + template_name
     else:
-        template_name = template_name
+        template_name = "desctop/" + template_name
     return template_name

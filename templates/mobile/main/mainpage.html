@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Главная страница{% endblock %}
+{% block meta %}
+<meta property="og:title" content="" />
+<meta property="og:image" content="" />
+<meta property="og:url" content="" />
+<meta property="og:image:width" content="470" />
+<meta property="og:image:height" content="246" />
+<meta property="og:site_name" content="" />
+<meta property="og:description" content="" />
+{% endblock %}
+
+{% block content %}
+
+{% include 'main/banner.html' %}
+
+{% include 'main/about.html' %}
+
+<hr class="mt-0 mb-0 " />
+
+{% include 'main/services.html' %}
+
+<hr class="mt-0 mb-0" />
+
+{% include 'main/process.html' %}
+
+<hr class="mt-0 mb-0" />
+
+{% include 'main/portfolio.html' %}
+
+{% include 'main/action.html' %}
+
+{% include 'main/features.html' %}
+
+{% include 'main/shop.html' %}
+
+{% include 'main/blog.html' %}
+
+{% include 'main/newsletter.html' %}
+
+{% include 'main/find.html' %}
+
+<section class="small-section bg-dark">
+    <div class="container relative">
+        <div class="align-center">
+            <h3 class="banner-heading font-alt">Want to discuss your new project?</h3>
+            <div>
+                <a href="" class="btn btn-mod btn-w btn-medium btn-round">Lets tallk</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

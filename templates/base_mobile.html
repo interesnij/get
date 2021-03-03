@@ -18,20 +18,17 @@
     <link type="text/css" media="none" onload="if(media!='all')media='all'" rel="stylesheet" href="/static/styles/vertical-rhythm.min.css">
     <link type="text/css" media="none" onload="if(media!='all')media='all'" rel="stylesheet" href="/static/styles/color/white.css">
 </head>
-
 <body>
 
     <div class="page" id="top">
-        {% include "desctop/navbar.html" %}
-
         <span id="ajax">
             <span id="reload_block">
                 {% block content %}
                 {% endblock %}
             </span>
         </span>
-
-        {% include "desctop/footer.html" %}
+        <br><br><br>
+        {% include "mobile/mobile_tab.html" %}
     </div>
 
     <script defer type="text/javascript" src="/static/scripts/wow.min.js"></script>

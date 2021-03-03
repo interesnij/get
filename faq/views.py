@@ -10,7 +10,7 @@ class FaqMainView(ListView, CategoryListMixin):
 
 	def get(self,request,*args,**kwargs):
 		self.template_name = get_small_template("faq/faq_cats.html", request.META['HTTP_USER_AGENT'])
-		return super(BlogDetailView,self).get(request,*args,**kwargs)
+		return super(FaqMainView,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):
 		faq = FaqCategory.objects.only("pk")
