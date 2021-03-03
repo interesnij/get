@@ -27,9 +27,11 @@ on('body', 'click', '.ajax', function(event) {
 })
 
 on('body', 'mouseover', '.mn-has-sub', function(event) {
-  setTimeout(this.nextElementSibling.style.display = "block", 1000);
-
+  this.nextElementSibling.style.display = "block"
+});
+on('body', 'mouseover', '.mn-sub', function(event) {
+  this.style.display = "block"
 });
 on('body', 'mouseout', '.mn-has-sub', function(event) {
-  setTimeout(this.nextElementSibling.style.display = "none", 2000);
+  this.nextElementSibling.style.display = "none"
 })
