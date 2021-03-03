@@ -15,7 +15,7 @@
                 </li>
                 <li>
                     <a href="#" class="mn-has-sub">Услуги <i class="fa fa-angle-down"></i></a>
-                    <ul class="mn-sub mn-has-multi wow fadeInUp" data-wow-duration="1s">
+                    <ul class="mn-sub mn-has-multi wow fadeIn" data-wow-duration="0.8s">
                       {% for object in service_cats %}
                         <li class="mn-sub-multi">
                             <a class="mn-group-title ajax" href="{% url 'service_list' slug=object.slug %}">{{ object.name }}</a>
