@@ -53,10 +53,10 @@
   padding: 5px;
   line-height: 15px;
 }
-.mobile_icon .active{
+.mobile_icon_active{
   color: black
 }
-.mobile_icon p{
+.mobile_icon_active p{
   margin: 0;
   font-size: 11px;
   color: #777;
