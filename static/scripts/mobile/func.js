@@ -149,11 +149,14 @@ function show_nav_first_span(){
   first_span = $mobile_nav.previousElementSibling.previousElementSibling;
   first_span.style.display = "flex"; first_span.classList.add("btn_active");
   hide_nav_second_span();
+  mobile_nav.querySelector(".first_span").classList.add(".mobile_icon_active");
+  mobile_nav.querySelector(".second_span").classList.remove(".mobile_icon_active")
 }
 function hide_nav_first_span(){
   first_span = $mobile_nav.previousElementSibling.previousElementSibling;
   first_span.style.display = "none"; first_span.classList.remove("btn_active");
-  deactivate_nav_buttons()
+  deactivate_nav_buttons();
+  mobile_nav.querySelector(".first_span").classList.remove(".mobile_icon_active");
 }
 function toggle_nav_first_span(){
   first_span = $mobile_nav.previousElementSibling.previousElementSibling;
@@ -164,11 +167,14 @@ function show_nav_second_span(){
   second_span = $mobile_nav.previousElementSibling;
   second_span.style.display = "flex"; second_span.classList.add("btn_active");
   hide_nav_first_span();
+  mobile_nav.querySelector(".first_span").classList.remove(".mobile_icon_active");
+  mobile_nav.querySelector(".second_span").classList.add(".mobile_icon_active")
 }
 function hide_nav_second_span(){
   second_span = $mobile_nav.previousElementSibling;
   second_span.style.display = "none"; second_span.classList.remove("btn_active");
-  deactivate_nav_buttons()
+  deactivate_nav_buttons();
+  mobile_nav.querySelector(".second_span").classList.remove(".mobile_icon_active");
 }
 function toggle_nav_second_span(){
   second_span = $mobile_nav.previousElementSibling;
