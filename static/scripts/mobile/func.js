@@ -202,7 +202,7 @@ function get_active_button(){
   buttons = $mobile_nav.querySelectorAll(".mobile_icon");
   for (var i = 0; i < buttons.length; i++){
     console.log(buttons[i].getAttribute("href"))
-    if (document.location.href == buttons[i].getAttribute("href")){
+    if (document.location.pathname == buttons[i].getAttribute("href")){
     buttons[i].classList.add("mobile_icon_active")
   }
   };
