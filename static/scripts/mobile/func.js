@@ -188,6 +188,6 @@ var ready = (callback) => {
 
 ready(() => {
    loader = document.body.querySelector(".page-loader");
-   loader.querySelector("div").fadeOut()
-   loader.delay(200).fadeOut("slow");
+   loader.querySelector("div").style.display = "none";
+   loader.style.display = "none";
 });
