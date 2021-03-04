@@ -124,9 +124,10 @@ function ajax_get_reload(url) {
         document.title = elem_.querySelector('title').innerHTML;
         window.history.pushState({route: url}, "network", url);
         banner_height_init(rtr);
-        loader_hide(rtr);
         hide_nav_first_span();
         hide_nav_second_span();
+        get_active_button();
+        loader_hide(rtr);
       }
     }
     ajax_link.send();
@@ -190,13 +191,18 @@ var ready = (callback) => {
 }
 
 function loader_hide(){
+  ready(() => {
   loader = document.body.querySelector(".page-loader");
   loader.querySelector("div").style.display = "none";
   loader.style.display = "none"
+  });
 }
 
-ready(() => {
-   loader = document.body.querySelector(".page-loader");
-   loader.querySelector("div").style.display = "none";
-   loader.style.display = "none";
-});
+function get_active_button(){
+  buttons = $mobile_nav.querySelectorAll(".mobile_icon");
+  for (var i = 0; i < buttons.length; i++){
+    if (document.location.href == buttons[i].getAttribute("href")){
+    buttons[i].classList.add("mobile_icon_active")
+  }
+  };
+}
