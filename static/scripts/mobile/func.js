@@ -187,11 +187,9 @@ var ready = (callback) => {
 }
 
 function loader_hide(){
-  ready(() => {
   loader = document.body.querySelector(".page-loader");
   loader.querySelector("div").style.display = "none";
   loader.style.display = "none"
-  });
 }
 
 ready(() => {
