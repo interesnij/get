@@ -27,15 +27,9 @@ on('body', 'click', '.ajax', function(event) {
   } else {toast_info("Вы уже на этой странице")}
 })
 
-on('body', 'mouseover', '.mn-has-sub', function(event) {
-  this.nextElementSibling.style.display = "block"
+on('body', 'click', '.apps_btn', function() {
+  toggle_nav_first_span();
 });
-on('body', 'mouseover', '.mn-sub', function(event) {
-  this.style.display = "block"
+on('body', 'click', '.pages_btn', function() {
+  toggle_nav_second_span();
 });
-on('body', 'mouseout', '.mn-has-sub', function(event) {
-  this.nextElementSibling.style.display = "none"
-})
-on('body', 'mouseout', '.mn-sub', function(event) {
-  this.style.display = "none"
-})

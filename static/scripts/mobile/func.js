@@ -1,3 +1,5 @@
+$mobile_nav = document.body.querySelector(".mobile_nav");
+
 class ToastManager {
     constructor() {
         this.id = 0;
@@ -136,4 +138,32 @@ function init_wow(){
       live: true
   });
   wow.init();
+}
+
+function show_nav_first_span(){
+  first_span = $mobile_nav.querySelector(".first_span");
+  first_span.style.display = "block"; first_span.classList.add("show");
+  hide_nav_second_span()
+}
+function hide_nav_first_span(){
+  first_span = $mobile_nav.querySelector(".first_span");
+  first_span.style.display = "none"; first_span.classList.remove("show")
+}
+function toggle_nav_first_span(){
+  first_span = $mobile_nav.querySelector(".first_span");
+  first_span.classList.contains("show") ? (hide_nav_first_span(), first_span.classList.remove("show")) : (show_nav_first_span(), first_span.classList.add("show"))
+}
+
+function show_nav_second_span(){
+  second_span = $mobile_nav.querySelector(".second_span");
+  second_span.style.display = "block"; second_span.classList.add("show");
+  hide_nav_first_span();
+}
+function hide_nav_second_span(){
+  second_span = $mobile_nav.querySelector(".second_span");
+  second_span.style.display = "none"; second_span.classList.remove("show")
+}
+function toggle_nav_second_span(){
+  second_span = $mobile_nav.querySelector(".second_span");
+  second_span.classList.contains("show") ? (hide_nav_second_span(), second_span.classList.remove("show")) : (show_nav_second_span(), second_span.classList.add("show"))
 }
