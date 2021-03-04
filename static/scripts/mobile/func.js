@@ -201,6 +201,7 @@ function loader_hide(){
 function get_active_button(){
   buttons = $mobile_nav.parentElement.querySelectorAll(".mobile_icon");
   path = document.location.pathname;
+  for (var i = 0; i < buttons.length; i++){buttons[i].classList.remove("mobile_icon_current")};
   for (var i = 0; i < buttons.length; i++){
     if (path == "/") {
     buttons[8].classList.add("mobile_icon_current"); break
@@ -212,6 +213,5 @@ function get_active_button(){
   } else if (path == "/about/" || path == "/contacts/" || path == "/tags/" || path == "/design/") {
     buttons[10].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
   }
-  else {buttons[i].classList.remove("mobile_icon_current")}
   };
 }
