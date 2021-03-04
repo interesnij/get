@@ -203,7 +203,9 @@ function get_active_button(){
   for (var i = 0; i < buttons.length; i++){
     console.log(buttons[i].getAttribute("href"))
     if (document.location.pathname == buttons[i].getAttribute("href")){
-    buttons[i].classList.add("mobile_icon_current") 
+    buttons[i].classList.add("mobile_icon_current")
+  } else {
+    buttons[i].classList.remove("mobile_icon_current") 
   }
   };
 }
