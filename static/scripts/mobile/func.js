@@ -202,12 +202,15 @@ function get_active_button(){
   buttons = $mobile_nav.parentElement.querySelectorAll(".mobile_icon");
   path = document.location.pathname;
   for (var i = 0; i < buttons.length; i++){
-    if (buttons[i].getAttribute("href") == path) {
-    buttons[i].classList.add("mobile_icon_current")
-  } else if (path.includes('service') || path.includes('works') || path.includes('blog') || path.includes('faq')) {
-    buttons[1].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current")
+    if (path == "/") {
+    buttons[0].classList.add("mobile_icon_current"); break
+  } else if (path == "/search/") {
+    buttons[3].classList.add("mobile_icon_current"); break
+  }
+  else if (path.includes('service') || path.includes('works') || path.includes('blog') || path.includes('faq')) {
+    buttons[1].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
   } else if (path == "/about/" || path == "/contacts/" || path == "/tags/" || path == "/design/") {
-    buttons[2].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current")
+    buttons[2].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
   }
   else {buttons[i].classList.remove("mobile_icon_current")}
   };
