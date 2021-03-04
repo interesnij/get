@@ -200,12 +200,13 @@ function loader_hide(){
 
 function get_active_button(){
   buttons = $mobile_nav.querySelectorAll(".mobile_icon");
+  path = document.location.pathname;
   for (var i = 0; i < buttons.length; i++){
-    console.log(buttons[i].getAttribute("href"))
-    if (document.location.pathname == buttons[i].getAttribute("href")){
+    if (buttons[i].getAttribute("href") == path) {
     buttons[i].classList.add("mobile_icon_current")
-  } else {
-    buttons[i].classList.remove("mobile_icon_current") 
   }
+  else {buttons[i].classList.remove("mobile_icon_current")}
+  };
+
   };
 }
