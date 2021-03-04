@@ -199,7 +199,7 @@ function loader_hide(){
 }
 
 function get_active_button(){
-  buttons = $mobile_nav.querySelectorAll(".mobile_icon");
+  buttons = $mobile_nav.parentElement.querySelectorAll(".mobile_icon");
   path = document.location.pathname;
   for (var i = 0; i < buttons.length; i++){
     console.log(path)
