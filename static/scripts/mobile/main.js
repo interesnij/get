@@ -23,7 +23,9 @@ on('body', 'click', '.ajax', function(event) {
   event.preventDefault();
   var url = this.getAttribute('href');
   if (url != window.location.pathname){
-    ajax_get_reload(url)
+    ajax_get_reload(url);
+    hide_nav_first_span();
+    hide_nav_second_span()
   } else {toast_info("Вы уже на этой странице")}
 })
 
