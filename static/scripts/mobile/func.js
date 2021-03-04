@@ -141,7 +141,7 @@ function init_wow(){
 }
 
 function deactivate_nav_buttons(){
-  buttons = mobile_nav.querySelectorAll(".mobile_icon");
+  buttons = $mobile_nav.querySelectorAll(".mobile_icon");
   for (var i = 0; i < buttons.length; i++){buttons[i].classList.remove("active")};
 }
 
