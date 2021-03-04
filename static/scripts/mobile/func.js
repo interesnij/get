@@ -142,28 +142,28 @@ function init_wow(){
 
 function show_nav_first_span(){
   first_span = $mobile_nav.querySelector(".first_span");
-  first_span.style.display = "block"; first_span.classList.add("show");
+  first_span.style.display = "grid"; first_span.classList.add("btn_active");
   hide_nav_second_span()
 }
 function hide_nav_first_span(){
   first_span = $mobile_nav.querySelector(".first_span");
-  first_span.style.display = "none"; first_span.classList.remove("show")
+  first_span.style.display = "none"; first_span.classList.remove("btn_active")
 }
 function toggle_nav_first_span(){
   first_span = $mobile_nav.querySelector(".first_span");
-  first_span.classList.contains("show") ? (hide_nav_first_span(), first_span.classList.remove("show")) : (show_nav_first_span(), first_span.classList.add("show"))
+  first_span.classList.contains("btn_active") ? (hide_nav_first_span(), first_span.classList.remove("btn_active")) : (show_nav_first_span(), first_span.classList.add("btn_active"))
 }
 
 function show_nav_second_span(){
   second_span = $mobile_nav.querySelector(".second_span");
-  second_span.style.display = "block"; second_span.classList.add("show");
+  second_span.style.display = "grid"; second_span.classList.add("btn_active");
   hide_nav_first_span();
 }
 function hide_nav_second_span(){
   second_span = $mobile_nav.querySelector(".second_span");
-  second_span.style.display = "none"; second_span.classList.remove("show")
+  second_span.style.display = "none"; second_span.classList.remove("btn_active")
 }
 function toggle_nav_second_span(){
   second_span = $mobile_nav.querySelector(".second_span");
-  second_span.classList.contains("show") ? (hide_nav_second_span(), second_span.classList.remove("show")) : (show_nav_second_span(), second_span.classList.add("show"))
+  second_span.classList.contains("btn_active") ? (hide_nav_second_span(), second_span.classList.remove("btn_active")) : (show_nav_second_span(), second_span.classList.add("btn_active"))
 }
