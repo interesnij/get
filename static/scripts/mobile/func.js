@@ -186,6 +186,14 @@ var ready = (callback) => {
   else document.addEventListener("DOMContentLoaded", callback);
 }
 
+function loader_hide(){
+  ready(() => {
+  loader = document.body.querySelector(".page-loader");
+  loader.querySelector("div").style.display = "none";
+  loader.style.display = "none"
+  });
+}
+
 ready(() => {
    loader = document.body.querySelector(".page-loader");
    loader.querySelector("div").style.display = "none";
