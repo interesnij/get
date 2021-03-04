@@ -199,17 +199,15 @@ function loader_hide(){
 }
 
 function get_active_button(){
-  buttons = $mobile_nav.querySelectorAll(".mobile_icon");
+  buttons = $mobile_nav.parentElement.querySelectorAll(".mobile_icon");
   path = document.location.pathname;
   for (var i = 0; i < buttons.length; i++){
-    console.log(buttons[1]);
-    console.log(buttons[2]);
     if (buttons[i].getAttribute("href") == path) {
     buttons[i].classList.add("mobile_icon_current")
   } else if (path.includes('service') || path.includes('works') || path.includes('blog') || path.includes('faq')) {
-    buttons[1].classList.add("mobile_icon_current")
+    buttons[1].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current")
   } else if (path == "/about/" || path == "/contacts/" || path == "/tags/" || path == "/design/") {
-    buttons[2].classList.add("mobile_icon_current")
+    buttons[2].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current")
   }
   else {buttons[i].classList.remove("mobile_icon_current")}
   };
