@@ -27,6 +27,7 @@
   z-index:3000;
   position: fixed;
   width: 100%;
+  padding-bottom: 5px;
 }
 .second_span {
   bottom: 40px;
@@ -39,6 +40,7 @@
   z-index:3000;
   position: fixed;
   width: 100%;
+  padding-bottom: 5px;
 }
 .mobile_icon {
   background: none;
@@ -69,7 +71,7 @@
   font-weight: bold;
 }
 .mobile_icon span {
-  font-size:16px
+  font-size:20px
 }
 .align-center{ text-align:center !important; }
 .align-left{ text-align:left !important;}
