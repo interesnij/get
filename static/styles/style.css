@@ -54,14 +54,14 @@
   line-height: 15px;
 }
 .mobile_icon_active{
-  color: black
+  background: #e5e5e5;
 }
 .mobile_icon p{
   margin: 0;
   font-size: 11px;
   color: #777;
 }
-.mobile_icon .active p{
+.mobile_icon_active p{
   color: black;
 }
 .align-center{ text-align:center !important; }
