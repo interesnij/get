@@ -30,12 +30,10 @@ on('body', 'click', '.ajax', function(event) {
 })
 
 on('body', 'click', '.apps_btn', function() {
-  _this = this;
   toggle_nav_first_span();
-  _this.classList.toggle("mobile_icon_active")
+  this.classList.contains("mobile_icon_active") ? this.classList.remove("mobile_icon_active") : this.classList.add("mobile_icon_active")
 });
 on('body', 'click', '.pages_btn', function() {
-  _this = this;
   toggle_nav_second_span();
-  _this.classList.toggle("mobile_icon_active")
+  this.classList.contains("mobile_icon_active") ? this.classList.remove("mobile_icon_active") : this.classList.add("mobile_icon_active")
 });
