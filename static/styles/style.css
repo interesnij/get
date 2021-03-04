@@ -49,13 +49,20 @@
   width: 100%;
   height: 100%;
   -webkit-animation: show 0.5s;
-          animation: show 0.5s;
+  animation: show 0.5s;
   padding: 5px;
   line-height: 15px;
+}
+.mobile_icon .active{
+  color: black
 }
 .mobile_icon p{
   margin: 0;
   font-size: 11px;
+  color: #777;
+}
+.mobile_icon .active p{
+  color: black;
 }
 .align-center{ text-align:center !important; }
 .align-left{ text-align:left !important;}

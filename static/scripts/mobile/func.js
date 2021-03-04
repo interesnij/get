@@ -140,14 +140,20 @@ function init_wow(){
   wow.init();
 }
 
+function deactivate_nav_buttons(){
+  buttons = mobile_nav.querySelectorAll(".mobile_icon");
+  for (var i = 0; i < buttons.length; i++){buttons[i].classList.remove("active")};
+}
+
 function show_nav_first_span(){
   first_span = $mobile_nav.previousElementSibling.previousElementSibling;
   first_span.style.display = "flex"; first_span.classList.add("btn_active");
-  hide_nav_second_span()
+  hide_nav_second_span();
 }
 function hide_nav_first_span(){
   first_span = $mobile_nav.previousElementSibling.previousElementSibling;
-  first_span.style.display = "none"; first_span.classList.remove("btn_active")
+  first_span.style.display = "none"; first_span.classList.remove("btn_active");
+  deactivate_nav_buttons()
 }
 function toggle_nav_first_span(){
   first_span = $mobile_nav.previousElementSibling.previousElementSibling;
@@ -161,7 +167,8 @@ function show_nav_second_span(){
 }
 function hide_nav_second_span(){
   second_span = $mobile_nav.previousElementSibling;
-  second_span.style.display = "none"; second_span.classList.remove("btn_active")
+  second_span.style.display = "none"; second_span.classList.remove("btn_active");
+  deactivate_nav_buttons()
 }
 function toggle_nav_second_span(){
   second_span = $mobile_nav.previousElementSibling;
