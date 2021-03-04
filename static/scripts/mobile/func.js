@@ -142,7 +142,7 @@ function init_wow(){
 
 function show_nav_first_span(){
   first_span = $mobile_nav.previousElementSibling.previousElementSibling;
-  first_span.style.display = "block"; first_span.classList.add("btn_active");
+  first_span.style.display = "flex"; first_span.classList.add("btn_active");
   hide_nav_second_span()
 }
 function hide_nav_first_span(){
@@ -156,7 +156,7 @@ function toggle_nav_first_span(){
 
 function show_nav_second_span(){
   second_span = $mobile_nav.previousElementSibling;
-  second_span.style.display = "block"; second_span.classList.add("btn_active");
+  second_span.style.display = "flex"; second_span.classList.add("btn_active");
   hide_nav_first_span();
 }
 function hide_nav_second_span(){
