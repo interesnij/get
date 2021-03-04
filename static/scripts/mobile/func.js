@@ -180,3 +180,14 @@ function toggle_nav_second_span(){
   second_span = $mobile_nav.previousElementSibling;
   second_span.classList.contains("btn_active") ? (hide_nav_second_span(), second_span.classList.remove("btn_active")) : (show_nav_second_span(), second_span.classList.add("btn_active"))
 }
+
+var ready = (callback) => {
+  if (document.readyState != "loading") callback();
+  else document.addEventListener("DOMContentLoaded", callback);
+}
+
+ready(() => {
+   loader = document.body.querySelector(".page-loader");
+   loader.querySelector("div").fadeOut()
+   loader.delay(200).fadeOut("slow");
+});
