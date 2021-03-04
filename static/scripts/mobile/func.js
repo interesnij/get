@@ -205,7 +205,7 @@ function get_active_button(){
     console.log(path);
     if (buttons[i].getAttribute("href") == path) {
     buttons[i].classList.add("mobile_icon_current")
-  } else if (path.indexOf('service') || path.indexOf('works') || path.indexOf('blog') || path.indexOf('faq')) {
+  } else if (path.includes('service') || path.includes('works') || path.includes('blog') || path.includes('faq')) {
     buttons[1].classList.add("mobile_icon_current")
   } else if (path == "/about/" || path == "/contacts/" || path == "/tags/" || path == "/design/") {
     buttons[2].classList.add("mobile_icon_current")
