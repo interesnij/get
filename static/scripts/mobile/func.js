@@ -210,7 +210,7 @@ function get_active_button(){
   }
   else if (buttons[i].getAttribute("href") == path && (path.includes('service') || path.includes('works') || path.includes('blog') || path.includes('faq'))) {
     buttons[9].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
-  } else if ((path == "/about/" || path == "/contacts/" || path == "/tags/" || path == "/design/")) && buttons[i].getAttribute("href") == path) {
+  } else if (buttons[i].getAttribute("href") == path && (path == "/about/" || path == "/contacts/" || path == "/tags/" || path == "/design/")) {
     buttons[10].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
   }
   };
