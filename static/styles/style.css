@@ -16,7 +16,30 @@
   position: fixed;
   width: 100%;
 }
-
+.first_span {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  z-index:3000;
+  position: fixed;
+  width: 100%;
+}
+.second_span {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  z-index:3000;
+  position: fixed;
+  width: 100%;
+}
 .mobile_icon {
   background: none;
   border: none;
