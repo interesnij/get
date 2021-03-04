@@ -207,6 +207,4 @@ function get_active_button(){
   }
   else {buttons[i].classList.remove("mobile_icon_current")}
   };
-
-  };
 }
