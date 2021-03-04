@@ -203,14 +203,14 @@ function get_active_button(){
   path = document.location.pathname;
   for (var i = 0; i < buttons.length; i++){
     if (path == "/") {
-    buttons[0].classList.add("mobile_icon_current"); break
+    buttons[8].classList.add("mobile_icon_current"); break
   } else if (path == "/search/") {
-    buttons[3].classList.add("mobile_icon_current"); break
+    buttons[11].classList.add("mobile_icon_current"); break
   }
   else if (path.includes('service') || path.includes('works') || path.includes('blog') || path.includes('faq')) {
-    buttons[1].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
+    buttons[9].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
   } else if (path == "/about/" || path == "/contacts/" || path == "/tags/" || path == "/design/") {
-    buttons[2].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
+    buttons[10].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
   }
   else {buttons[i].classList.remove("mobile_icon_current")}
   };
