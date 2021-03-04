@@ -56,7 +56,7 @@
   line-height: 16px;
 }
 
-.mobile_icon_active{
+.mobile_icon_active, .mobile_icon_current{
   background: #e5e5e5;
 }
 .mobile_icon p{
@@ -64,10 +64,10 @@
   font-size: 11px;
   color: #777;
 }
-.mobile_icon_active p{
+.mobile_icon_active p, .mobile_icon_current p{
   color: black;
 }
-.mobile_icon_active span{
+.mobile_icon_active span, .mobile_icon_current span{
   font-weight: bold;
 }
 .mobile_icon span {
