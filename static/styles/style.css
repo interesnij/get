@@ -50,9 +50,10 @@
   height: 100%;
   -webkit-animation: show 0.5s;
   animation: show 0.5s;
-  padding: 5px;
-  line-height: 15px;
+  padding-top: 5px;
+  line-height: 16px;
 }
+
 .mobile_icon_active{
   background: #e5e5e5;
 }
@@ -63,6 +64,12 @@
 }
 .mobile_icon_active p{
   color: black;
+}
+.mobile_icon_active span{
+  font-weight: bold;
+}
+.mobile_icon span {
+  font-size:16px
 }
 .align-center{ text-align:center !important; }
 .align-left{ text-align:left !important;}
