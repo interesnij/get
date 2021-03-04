@@ -14,7 +14,7 @@
                     <a href="{% url 'main' %}" class="ajax">Главная</a>
                 </li>
                 <li>
-                    <a href="#" class="mn-has-sub">Услуги <i class="fa fa-angle-down"></i></a>
+                    <a href="{% url 'service_cats' %}" class="mn-has-sub ajax">Услуги</a>
                     <ul class="mn-sub mn-has-multi wow fadeIn" data-wow-duration="0.8s">
                       {% for object in service_cats %}
                         <li class="mn-sub-multi">
@@ -31,7 +31,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="{% url 'works_cats' %}" class="mn-has-sub">Портфолио <i class="fa fa-angle-down"></i></a>
+                    <a href="{% url 'works_cats' %}" class="mn-has-sub ajax">Портфолио</a>
                     <ul class="mn-sub">
                       {% for object in works_cats %}
                         <li class="mn-sub-multi">
@@ -49,7 +49,7 @@
                 </li>
 
                 <li>
-                    <a href="{% url 'faq_cats' %}" class="mn-has-sub">База знаний <i class="fa fa-angle-down"></i></a>
+                    <a href="{% url 'faq_cats' %}" class="mn-has-sub">База знаний</a>
                     <ul class="mn-sub">
                       {% for object in faq_cats %}
                         <li class="mn-sub-multi">
@@ -66,7 +66,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="{% url 'blog_cats' %}" class="mn-has-sub">Блог <i class="fa fa-angle-down"></i></a>
+                    <a href="{% url 'blog_cats' %}" class="mn-has-sub">Блог</a>
                     <ul class="mn-sub to-left">
                       {% for object in blog_cats %}
                         <li>
@@ -79,7 +79,7 @@
                     <a href="{% url 'tags' %}" class="ajax">Теги</a>
                 </li>
                 <li>
-                    <a href="#" class="mn-has-sub">Инфо <i class="fa fa-angle-down"></i></a>
+                    <a href="#" class="mn-has-sub">Инфо</a>
                     <ul class="mn-sub to-left">
                         <li>
                             <a class="ajax" href="">Команда</a>
@@ -97,15 +97,13 @@
                 </li>
                 <li><a>&nbsp;</a></li>
                 <li>
-                    <a href="#" class="mn-has-sub"><i class="fa fa-search"></i> поиск</a>
+                    <a href="#" class="mn-has-sub">поиск</a>
                     <ul class="mn-sub to-left">
                         <li>
                             <div class="mn-wrap">
                                 <form method="post" class="form">
                                     <div class="search-wrap">
-                                        <button class="search-button animate" type="submit" title="Поиск">
-                                            <i class="fa fa-search"></i>
-                                        </button>
+                                        <button class="search-button animate" type="submit" title="Поиск"></button>
                                         <input type="text" class="form-control search-field" placeholder="Поиск...">
                                     </div>
                                 </form>
@@ -114,7 +112,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="mn-has-sub">Ru <i class="fa fa-angle-down"></i></a>
+                    <a href="#" class="mn-has-sub">Ru</a>
                     <ul class="mn-sub">
                         <li><a href="" class="active">Ru</a></li>
                         <li><a href="">En</a></li>
