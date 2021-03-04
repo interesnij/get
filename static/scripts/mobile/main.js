@@ -2,7 +2,7 @@
 ajax = document.body.querySelector("#ajax");
 banner_height_init(ajax);
 init_wow();
-loader_hide();
+loader_hide(ajax);
 
 on('#ajax', 'click', '.s_1', function() {
   service_tab_action(this, ".tab_1")
@@ -25,9 +25,6 @@ on('body', 'click', '.ajax', function(event) {
   var url = this.getAttribute('href');
   if (url != window.location.pathname){
     ajax_get_reload(url);
-    hide_nav_first_span();
-    hide_nav_second_span();
-    loader_hide()
   } else {toast_info("Вы уже на этой странице")}
 })
 

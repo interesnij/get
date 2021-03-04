@@ -124,6 +124,9 @@ function ajax_get_reload(url) {
         document.title = elem_.querySelector('title').innerHTML;
         window.history.pushState({route: url}, "network", url);
         banner_height_init(rtr);
+        loader_hide(rtr);
+        hide_nav_first_span();
+        hide_nav_second_span();
       }
     }
     ajax_link.send();
