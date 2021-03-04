@@ -30,10 +30,12 @@ on('body', 'click', '.ajax', function(event) {
 })
 
 on('body', 'click', '.apps_btn', function() {
+  _this = this;
   toggle_nav_first_span();
-  this.classList.toggle("mobile_icon_active")
+  _this.classList.toggle("mobile_icon_active")
 });
 on('body', 'click', '.pages_btn', function() {
+  _this = this;
   toggle_nav_second_span();
-  this.classList.toggle("mobile_icon_active")
+  _this.classList.toggle("mobile_icon_active")
 });
