@@ -3,28 +3,31 @@
         <h2 class="section-title font-alt align-left mb-70 mb-sm-40">
             Последние статьи
             <a href="" class="section-more right">
-              All News in our blog <i class="fa fa-angle-right"></i>
+              Перейти в раздел
             </a>
         </h2>
         <div class="row multi-columns-row">
-            <div class="col-sm-6 col-md-4 col-lg-4 mb-md-50 wow fadeIn" data-wow-delay="0.1s" data-wow-duration="2s">
+          {% for object in blog %}
+            <div class="mb-md-50">
                 <div class="post-prev-img">
-                    <a href="blog-single-sidebar-right.html"><img src="images/blog/post-prev-1.jpg" alt="" /></a>
+                    <a href="{% url 'blog' slug=object.slug %}" class="ajax">
+                      <img src="{{ object.image.url }}" alt="" />
+                    </a>
                 </div>
                 <div class="post-prev-title font-alt">
-                    <a href="">New Web Design Trends</a>
+                    <a href="">{{ object.title }}</a>
                 </div>
                 <div class="post-prev-info font-alt">
-                    <a href="">John Doe</a> | 10 December
+                    {{ object.get_created }}
                 </div>
                 <div class="post-prev-text">
-                    Maecenas  volutpat, diam enim sagittis quam, id porta quam. Sed id dolor
-                    consectetur fermentum nibh volutpat, accumsan purus.
+                    {{ object.description }}
                 </div>
                 <div class="post-prev-more">
-                    <a href="" class="btn btn-mod btn-gray btn-round">Read More <i class="fa fa-angle-right"></i></a>
+                    <a href="{% url 'blog' slug=object.slug %}" class="btn btn-mod btn-gray btn-round ajax">Читать</a>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>
