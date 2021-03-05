@@ -36,3 +36,12 @@ class WorksCatView(ListView, CategoryListMixin):
 		context = super(WorksCatView, self).get_context_data(**kwargs)
 		context['cat'] = self.cat
 		return context
+
+
+class WorksCalculator(TemplateView, CategoryListMixin):
+	template_name = None
+
+	def get(self,request,*args,**kwargs):
+		self.work = Works.objects.get(pk=self.kwargs["pk"])
+		self.template_name = get_small_template("works/calculator.html", request.META['HTTP_USER_AGENT'])
+		return super(WorksCalculator,self).get(request,*args,**kwargs)
