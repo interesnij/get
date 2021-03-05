@@ -215,3 +215,5 @@ function get_active_button(){
   }
   };
 }
+
+banner_height_init(document.body.querySelector("#ajax"));
