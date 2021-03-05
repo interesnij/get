@@ -9,12 +9,6 @@
     <link rel="canonical" href="" />
     <title>{% block title %}{% endblock %}</title>
     {% block meta %}{% endblock %}
-    <script>
-    //if (document.querySelector(".js-height-full")){
-    block = document.querySelector(".js-height-full");
-        block.style.height = (document.innerHeight - 44) + "px";
-    //  }
-    </script>
     <link type="text/css" media="all" rel="stylesheet" href="/static/styles/fonts.css">
     <link type="text/css" media="all" rel="stylesheet" href="/static/styles/bootstrap.min.css">
     <link type="text/css" media="all" rel="stylesheet" href="/static/styles/style.css">
@@ -38,9 +32,9 @@
         {% include "mobile/mobile_tab.html" %}
     </div>
 
-    <script defer type="text/javascript" src="/static/scripts/wow.min.js"></script>
-    <script defer type="text/javascript" src="/static/scripts/mobile/func.js"></script>
-    <script defer type="text/javascript" src="/static/scripts/mobile/main.js"></script>
+    <script type="text/javascript" src="/static/scripts/wow.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/mobile/func.js"></script>
+    <script type="text/javascript" src="/static/scripts/mobile/main.js"></script>
 </body>
 
 </html>
