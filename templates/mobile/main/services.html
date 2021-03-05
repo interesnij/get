@@ -28,7 +28,7 @@
                         <div class="mb-sm-50">
                           <blockquote class="mb-0">
                             <span class="icon-attachment"></span>
-                              <a href="{% url 'service_cats' %}" class="ajax" style="margin-bottom:5px;text-decoration: underline;">Разработка</a>
+                            <a href="{% url 'service_cats' %}" class="ajax" style="margin-bottom:5px;text-decoration: underline;">Разработка</a>
                           </blockquote>
                           <p>
                           <strong>Раздел</strong> посвящён описанию <strong>наших услуг</strong> по разработке сайтов.<br><br>
@@ -54,8 +54,9 @@
                 <div class="section-text">
                     <div class="row">
                       <div class="mb-sm-50">
-                        <blockquote class="mb-0" style="text-decoration: underline;">
-                            <p style="margin-bottom:5px">Портфолио</p>
+                        <blockquote class="mb-0">
+                          <span class="icon-attachment"></span>
+                          <a href="{% url 'works_cats' %}" class="ajax" style="margin-bottom:5px;text-decoration: underline;">Портфолио</a>
                         </blockquote>
                         <p>
                           В этом разделе мы будем размещать собственные, заказанные, совместные сайты.<br><br>
@@ -74,10 +75,10 @@
             <div class="tab_3 fade tab-pane in wow fadeIn" data-wow-duration="0.3s">
                 <div class="section-text">
                     <div class="row">
-
                       <div class="mb-sm-50">
-                        <blockquote class="mb-0" style="text-decoration: underline;">
-                            <p style="margin-bottom:5px">Блог</p>
+                        <blockquote class="mb-0">
+                          <span class="icon-attachment"></span>
+                          <a href="{% url 'blog_cats' %}" class="ajax" style="margin-bottom:5px;text-decoration: underline;">Блог</a>
                         </blockquote>
                         <p>
                           Любой уважающей себя и свой престиж фирме следует давать сведения о разных сторонах своего существования.<br><br>
@@ -97,8 +98,9 @@
                 <div class="section-text">
                     <div class="row">
                       <div class="mb-sm-50">
-                        <blockquote class="mb-0" style="text-decoration: underline;">
-                            <p style="margin-bottom:5px">База знаний</p>
+                        <blockquote class="mb-0">
+                          <span class="icon-attachment"></span>
+                          <a href="{% url 'faq_cats' %}" class="ajax" style="margin-bottom:5px;text-decoration: underline;">База знаний</a>
                         </blockquote>
                         <p>
                           Далеко не все могут позволить себе заказать соцсеть у профессионалов. Нельзя лишать людей шансов
@@ -121,20 +123,36 @@
                 <div class="section-text">
                     <div class="row">
                       <div class="mb-sm-50">
-                        <blockquote class="mb-0" style="text-decoration: underline;">
-                            <p style="margin-bottom:5px">Страницы</p>
+                        <blockquote class="mb-0">
+                          <p style="margin-bottom:5px;text-decoration: underline;">Страницы</p>
                         </blockquote>
                         <p>
                           <strong>Сайт имеет много отдельных страниц</strong>:
                           <ul>
-                              <li>О нас. Кто мы, чего хотим, как развиваемся, к чему идём.</li>
-                              <li>О сайте. Назначение, структура, преимущества, путеводитель, форма связи</li>
-                              <li>Калькулятор стоимости. Подсчитает, в какую сумму обойдётся Ваш заказ на основе
-                              множественных вариантов, скидок, предложений и дополнений.</li>
-                              <li>Теги. По ключевым словам можно будет видеть весь материал со всех разделов сайта.</li>
-                              <li>Поиск. Быстрый лифт к нужному вопросу.</li>
-                              <li>Дизайн. Мы любим давать пользователям инструменты для кастомизации станиц для их удобства.
-                               Пока реализованы режимы "День", "Ночь", "Детский", "Оригинальный"</li>
+                              <li><span class="icon-attachment"></span>
+                                <a href="{% url 'about' %}" class="ajax" style="text-decoration: underline;">О нас</a>.
+                                Кто мы, чего хотим, как развиваемся, к чему идём.</li>
+                              <li><span class="icon-attachment"></span>
+                                <a href="{% url 'contacts' %}" class="ajax" style="text-decoration: underline;">О сайте</a>.
+                                Назначение, структура, преимущества, путеводитель, форма связи</li>
+                              <li><span class="icon-attachment"></span>
+                                <a href="{% url 'works_calculator' %}" class="ajax" style="text-decoration: underline;">Калькулятор стоимости</a>.
+                                Подсчитает, в какую сумму обойдётся Ваш заказ на основе
+                                множественных вариантов, скидок, предложений и дополнений.
+                              </li>
+                              <li><span class="icon-attachment"></span>
+                                <a href="{% url 'tags' %}" class="ajax" style="text-decoration: underline;">Теги</a>.
+                                По ключевым словам можно будет видеть весь материал со всех разделов сайта.
+                              </li>
+                              <li><span class="icon-attachment"></span>
+                                <a href="{% url 'search' %}" class="ajax" style="text-decoration: underline;">Теги</a>.
+                                 Быстрый лифт к нужному контенту.
+                               </li>
+                              <li><span class="icon-attachment"></span> 
+                                <a href="{% url 'design' %}" class="ajax" style="text-decoration: underline;">Дизайн</a>.
+                                Мы любим давать пользователям инструменты для кастомизации станиц для их удобства.
+                               Пока реализованы режимы "День", "Ночь", "Детский", "Оригинальный"
+                             </li>
                           </ul>
                         </p>
                       </div>
