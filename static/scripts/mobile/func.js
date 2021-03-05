@@ -138,7 +138,7 @@ function init_wow(){
       boxClass: 'wow',
       animateClass: 'animated',
       offset: 90,
-      mobile: true,
+      mobile: false,
       live: true
   });
   wow.init();
