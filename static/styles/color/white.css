@@ -1136,6 +1136,10 @@ a.blog-item-more:hover{
     color: black;
     font-weight: bold;
 }
+.tpl-alt-tabs li.active span{
+    color: black;
+    font-weight: bold;
+}
 .alert{
     border: 1px solid #ddd;
     color: #777;
