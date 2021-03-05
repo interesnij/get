@@ -41,11 +41,7 @@ a{
     color: #111;
 }
 a:hover{
-    color: #888;
-}
-
-blockquote{
-    color: #777;
+    color: black;
 }
 
 pre{
