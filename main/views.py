@@ -1,6 +1,7 @@
 from django.views.generic.base import TemplateView
 from generic.mixins import CategoryListMixin
 from common.utils import get_small_template
+from works.models import Works
 
 
 class MainPageView(TemplateView, CategoryListMixin):
@@ -12,4 +13,5 @@ class MainPageView(TemplateView, CategoryListMixin):
 
 	def get_context_data(self,**kwargs):
 		context = super(MainPageView,self).get_context_data(**kwargs)
+		context["works"] = Works.objects.only("pk")[:2]
 		return context
