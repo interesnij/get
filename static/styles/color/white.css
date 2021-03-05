@@ -1133,9 +1133,6 @@ a.blog-item-more:hover{
     border: 1px solid #222 !important;
     color: #000;
 }
-.tpl-alt-tabs > li > a{
-    color: #a3a3a3;
-}
 
 .tpl-alt-tabs li.active a,
 .tpl-alt-tabs li.active a:hover,
