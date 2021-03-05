@@ -2,7 +2,9 @@
 ::-webkit-selection{ color: #fff !important; background:#000 !important; }
 ::selection{ color: #fff !important; background:#000 !important; }
 
-
+.bg_custom {
+  background: #e5e5e5
+}
 .svg_default {
     color: rgba(0, 0, 0, 0.5) !important;
 }
