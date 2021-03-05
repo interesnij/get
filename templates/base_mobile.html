@@ -11,7 +11,8 @@
     {% block meta %}{% endblock %}
     <script>
     //if (document.querySelector(".js-height-full")){
-        document.querySelector(".js-height-full").style.height = (window.innerHeight - 44) + "px";
+    block = document.querySelector(".js-height-full");
+        block.style.height = (window.innerHeight - 44) + "px";
     //  }
     </script>
     <link type="text/css" media="all" rel="stylesheet" href="/static/styles/fonts.css">
