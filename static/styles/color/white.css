@@ -1121,10 +1121,6 @@ a.blog-item-more:hover{
 .tpl-tabs li.active a{
     color: #000;
 }
-.tpl-tabs-cont{
-    color: #777;
-}
-
 .tpl-minimal-tabs > li > a{
     color: #000;
 }
@@ -1140,13 +1136,12 @@ a.blog-item-more:hover{
 .tpl-alt-tabs > li > a{
     color: #a3a3a3;
 }
-.tpl-alt-tabs > li > a:hover{
-    color: #111;
-}
+
 .tpl-alt-tabs li.active a,
 .tpl-alt-tabs li.active a:hover,
 .tpl-alt-tabs li.active a:focus{
-    color: #111;
+    color: black;
+    font-weight: bold;
 }
 .alert{
     border: 1px solid #ddd;
