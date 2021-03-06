@@ -1,34 +1,44 @@
+{% if last_store %}
+
 <section class="page-section">
     <div class="container relative">
         <h2 class="section-title font-alt align-left mb-70 mb-sm-40">
-            Продажа сайтов
-            <a href="" class="section-more right ajax">Смотреть все</a>
+            Наша продукция
+            <a href="{% url 'store_cats' %}" class="section-more right ajax">Смотреть все</a>
         </h2>
         <div class="row multi-columns-row">
+          {% for object in last_store %}
             <div class="mb-60 mb-xs-40">
                 <div class="post-prev-img">
-                    <a href="">
-                      <img src="/static/images/promo.png" alt="img" />
+                    <a href="{% url 'store' slug=object.slug %}" class="ajax">
+                      <img src="{{ object.image.url }}" alt="img" />
                     </a>
+                    {% if onject.price_acc %}
                     <div class="intro-label">
                         <span class="label label-danger bg-red">Скидка</span>
                     </div>
+                    {% endif %}
                 </div>
                 <div class="post-prev-title font-alt align-center">
-                    <a href="">Аналог Avito</a>
+                    <a href="">{{ object.title }}</a>
                 </div>
                 <div class="post-prev-text align-center">
+                  {% if onject.price_acc %}
                     <del>
-                        ₽ 2000 000
-                    </del>
-                    &nbsp;<strong>₽ 2500 000</strong>
+                        ₽ {{ object.price_acc }}
+                    </del>&nbsp;
+                  {% endif %}
+                    <strong>₽ {{ object.price }}</strong>
                 </div>
                 <div class="post-prev-more align-center">
-                    <a href="" class="btn btn-mod btn-gray btn-round">
+                    <a href="{% url 'store' slug=object.slug %}" class="ajax btn btn-mod btn-gray btn-round">
                       <span class="icon-basket"></span> Подробнее
                     </a>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>
+
+{% endif %}

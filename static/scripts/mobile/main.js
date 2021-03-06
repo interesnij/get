@@ -64,20 +64,26 @@ on('body', 'click', '.pages_btn', function() {
 });
 
 on('body', 'click', '#register_ajax', function() {
-  if (!document.body.querySelector("#username").value){
-    document.body.querySelector("#username").style.border = "1px #FF0000 solid";
+  form = document.querySelector("#signup");
+  if (!form.querySelector(".r_username").value){
+    form.querySelector(".r_username").style.border = "1px #FF0000 solid";
     toast_error("Придумайте логин!");
-  } else if (!document.body.querySelector("#email").value){
-    document.body.querySelector("#email").style.border = "1px #FF0000 solid";
+  } else if (!form.querySelector(".r_email").value){
+    form.querySelector(".r_email").style.border = "1px #FF0000 solid";
     toast_error("Введите Вашу почту!")
-  } else if (!document.body.querySelector("#password1").value){
-    document.body.querySelector("#password1").style.border = "1px #FF0000 solid";
+  } else if (!form.querySelector(".password1").value){
+    form.querySelector(".password1").style.border = "1px #FF0000 solid";
     toast_error("Пароль - обязательное поле!")
-  } else if (!document.body.querySelector("#password2").value){
-    document.body.querySelector("#password2").style.border = "1px #FF0000 solid";
+  } else if (!form.querySelector(".password2").value){
+    form.querySelector(".password2").style.border = "1px #FF0000 solid";
     toast_error("Введите пароль еще раз!")
   }
-  form_data = new FormData(document.querySelector("#signup"));
+  if (form.querySelector(".r_username").value){form.querySelector(".r_username").style.border = "rgba(0, 0, 0, 0.2)";}
+  if (form.querySelector(".r_email").value){form.querySelector(".r_email").style.border = "rgba(0, 0, 0, 0.2)";}
+  if (form.querySelector(".password1").value){form.querySelector(".password1").style.border = "rgba(0, 0, 0, 0.2)";}
+  if (form.querySelector(".password2").value){form.querySelector(".password2").style.border = "rgba(0, 0, 0, 0.2)";}
+
+  form_data = new FormData(form);
   reg_link = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject( 'Microsoft.XMLHTTP' );
   reg_link.open( 'POST', "/rest-auth/registration/", true );
   reg_link.onreadystatechange = function () {
@@ -88,16 +94,17 @@ on('body', 'click', '#register_ajax', function() {
   reg_link.send(form_data);
 })
 on('body', 'click', '#logg', function() {
-  if (!document.body.querySelector("#username").value){
-    document.body.querySelector("#username").style.border = "1px #FF0000 solid";
+  form = document.querySelector("#login_form");
+  if (!form.querySelector(".l_username").value){
+    form.querySelector(".l_username").style.border = "1px #FF0000 solid";
     toast_error("Введите логин!")}
-  else if (!document.body.querySelector("#password").value){
-    document.body.querySelector("#password").style.border = "1px #FF0000 solid";
+  else if (!form.querySelector(".l_password").value){
+    form.querySelector(".l_password").style.border = "1px #FF0000 solid";
     toast_error("Введите пароль!")}
-  if (document.body.querySelector("#username").value){document.body.querySelector("#username").style.border = "rgba(0, 0, 0, 0.2)";}
-  if (document.body.querySelector("#password").value){document.body.querySelector("#password").style.border = "rgba(0, 0, 0, 0.2)";}
+  if (form.querySelector(".l_username").value){form.querySelector(".l_username").style.border = "rgba(0, 0, 0, 0.2)";}
+  if (form.querySelector(".l_password").value){form.querySelector(".l_password").style.border = "rgba(0, 0, 0, 0.2)";}
 
-  form_data = new FormData(document.querySelector("#login_form"));
+  form_data = new FormData(form.querySelector("#login_form"));
   link = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject( 'Microsoft.XMLHTTP' );
   link.open( 'POST', "/rest-auth/login/", true );
   link.onreadystatechange = function () {

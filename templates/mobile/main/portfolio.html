@@ -1,4 +1,4 @@
-{% if works %}
+{% if last_works %}
 <section class="page-section pb-0" id="portfolio">
     <div class="relative">
         <h2 class="section-title font-alt mb-70 mb-sm-40">
@@ -10,7 +10,7 @@
           </div>
         </div>
         <ul class="works-grid work-grid-3 work-grid-gut clearfix font-alt hover-white hide-titles" id="work-grid">
-          {% for object in works %}
+          {% for object in last_works %}
             <li class="work-item">
                 <a href="{% url 'work' slug=object.slug %}" class="work-ext-link ajax">
                     <div class="work-img">
@@ -30,4 +30,7 @@
         </ul>
     </div>
 </section>
+
+{% include 'mobile/main/action.html' %}
+
 {% endif %}
