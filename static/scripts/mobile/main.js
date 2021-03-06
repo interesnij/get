@@ -104,7 +104,7 @@ on('body', 'click', '#logg', function() {
   if (form.querySelector(".l_username").value){form.querySelector(".l_username").style.border = "rgba(0, 0, 0, 0.2)";}
   if (form.querySelector(".l_password").value){form.querySelector(".l_password").style.border = "rgba(0, 0, 0, 0.2)";}
 
-  form_data = new FormData(form.querySelector("#login_form"));
+  form_data = new FormData(form);
   link = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject( 'Microsoft.XMLHTTP' );
   link.open( 'POST', "/rest-auth/login/", true );
   link.onreadystatechange = function () {
