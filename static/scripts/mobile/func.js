@@ -100,6 +100,7 @@ function service_tab_action(is, tab_class){
 }}
 function auth_tab_action(is, tab_class){
   if (!is.classList.contains("active")){
+    console.log(is)
     is.nextElementSibling.classList.remove("active");
     is.nextElementSibling.classList.add("pointer");
     is.classList.add("active"); is.classList.remove("pointer")

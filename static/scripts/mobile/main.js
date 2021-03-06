@@ -68,7 +68,7 @@ on('body', 'click', '#register_ajax', function() {
 })
 on('body', 'click', '#logg', function() {
   if (!document.body.querySelector("#username").value){
-    document.body.querySelector(".#username").style.border = "1px #FF0000 solid";
+    document.body.querySelector("#username").style.border = "1px #FF0000 solid";
     toast_error("Введите логин!")}
   else if (!document.body.querySelector("#password").value){
     document.body.querySelector("#password").style.border = "1px #FF0000 solid";
