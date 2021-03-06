@@ -98,14 +98,19 @@ function service_tab_action(is, tab_class){
   cur = tabs.querySelector(tab_class);
   cur.classList.add("active")
 }}
+function auth_tab_action(is, tab_class){
+  if (!is.classList.contains("active")){
+    is.nextElementSibling.classList.remove("active");
+    is.nextElementSibling.classList.add("pointer");
+    is.classList.add("active"); is.classList.remove("pointer")
+    nav = is.parentElement.parentElement;
 
-function banner_height_init(block){
-  console.log(block);
-  if (block.querySelector(".js-height-full")){
-    div = block.querySelector(".js-height-full");
-        div.style.height = (window.innerHeight - 44) + "px";
-    }
-};
+    tabs = nav.nextElementSibling;
+    tabs_items = tabs.querySelectorAll(".tab-pane");
+    for (var i = 0; i < tabs_items.length; i++){tabs_items[i].classList.remove("active")};
+    cur = tabs.querySelector(tab_class);
+    cur.classList.add("active")
+}}
 
 function on(elSelector, eventName, selector, fn) {var element = document.querySelector(elSelector);element.addEventListener(eventName, function(event) {var possibleTargets = element.querySelectorAll(selector);var target = event.target;for (var i = 0, l = possibleTargets.length; i < l; i++) {var el = target;var p = possibleTargets[i];while (el && el !== element) {if (el === p) {return fn.call(p, event);}el = el.parentNode;}}});};
 
@@ -210,10 +215,8 @@ function get_active_button(){
   }
   else if (buttons[i].getAttribute("href") == path && (path.includes('service') || path.includes('works') || path.includes('blog') || path.includes('faq'))) {
     buttons[9].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
-  } else if (buttons[i].getAttribute("href") == path && (path == "/about/" || path == "/contacts/" || path == "/tags/" || path == "/design/")) {
+  } else if (buttons[i].getAttribute("href") == path && (path == "/about/" || path == "/contacts/" || path == "/tags/" || path == "/search/" || path == "/design/")) {
     buttons[10].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
   }
   };
 }
-
-banner_height_init(document.body.querySelector("#ajax"));

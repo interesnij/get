@@ -1,6 +1,4 @@
 
-ajax = document.body.querySelector("#ajax");
-banner_height_init(ajax);
 init_wow();
 
 on('#ajax', 'click', '.s_1', function() {

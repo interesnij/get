@@ -18,6 +18,8 @@ urlpatterns = [
 
     url(r'^works_cat/', include('works_cat.urls')),
     url(r'^works/', include('works.urls')),
+    url(r'^store_cat/', include('store_cat.urls')),
+    url(r'^store/', include('store.urls')),
 
     url(r'^tags/', include('tags.urls')),
 
@@ -32,5 +34,8 @@ urlpatterns = [
     url(r'^policy/', include('policy.urls')),
 
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    url(r'^rest-auth/', include('rest_auth.urls')),
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+    url(r'^logout/$', auth_views.LogoutView.as_view(template_name="logout.html"), name='logout'),
 
 ]  +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

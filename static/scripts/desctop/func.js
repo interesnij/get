@@ -97,14 +97,6 @@ function service_tab_action(is, tab_class){
   cur.classList.add("active")
 }}
 
-function banner_height_init(block){
-  console.log(block);
-  if (block.querySelector(".js-height-full")){
-        block.querySelector(".js-height-full").style.height = window.innerHeight + "px";
-        window.scrollTo(0,0);
-    }
-};
-
 function on(elSelector, eventName, selector, fn) {var element = document.querySelector(elSelector);element.addEventListener(eventName, function(event) {var possibleTargets = element.querySelectorAll(selector);var target = event.target;for (var i = 0, l = possibleTargets.length; i < l; i++) {var el = target;var p = possibleTargets[i];while (el && el !== element) {if (el === p) {return fn.call(p, event);}el = el.parentNode;}}});};
 
 function ajax_get_reload(url) {

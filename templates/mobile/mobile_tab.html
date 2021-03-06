@@ -8,6 +8,10 @@
     <span class="icon-briefcase"></span>
     <p>Работы</p>
   </button>
+  <button href="{% url 'store_cats' %}" class="mobile_icon border ajax">
+    <span class="icon-basket"></span>
+    <p>Продукты</p>
+  </button>
   <button href="{% url 'blog_cats' %}" class="mobile_icon border ajax">
     <span class="icon-newspaper"></span>
     <p>Блог</p>
@@ -31,6 +35,10 @@
     <span class="icon-ribbon"></span>
     <p>Теги</p>
   </button>
+  <button href="{% url 'search' %}" class="mobile_icon border ajax search_btn">
+    <span class="icon-search"></span>
+    <p>Поиск</p>
+  </button>
   <button href="" class="mobile_icon border ajax">
     <span class="icon-pencil"></span>
     <p>Дизайн</p>
@@ -44,15 +52,22 @@
     </button>
     <button class="mobile_icon border apps_btn">
       <span class="icon-layers"></span>
-      <p>Разделы</p>
+      <p>Разделы</p> 
     </button>
     <button href="" class="mobile_icon border pages_btn">
       <span class="icon-documents"></span>
       <p>Страницы</p>
     </button>
-    <button href="{% url 'search' %}" class="mobile_icon border ajax search_btn">
-      <span class="icon-search"></span>
-      <p>Поиск</p>
-    </button>
+    {% if request.user.is_authenticated %}
+      <button href="{% url 'user' pk=request.user.pk %}" class="mobile_icon border ajax user_btn">
+        <span class="icon-profile-male"></span>
+        <p>Профиль</p>
+      </button>
+    {% else %}
+      <button href="{% url 'login' %}" class="mobile_icon border ajax user_btn">
+        <span class="icon-profile-male"></span>
+        <p>Вход</p>
+      </button>
+    {% else %}
   </nav>
 </span>

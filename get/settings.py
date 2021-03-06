@@ -18,6 +18,11 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'django.contrib.sites',
     'rest_framework',
+    'rest_auth',
+    'rest_auth.registration',
+    'ckeditor',
+    'ckeditor_uploader',
+    'easy_thumbnails',
 
     'service_cat',
     'service',
@@ -25,6 +30,8 @@ INSTALLED_APPS = [
     'blog',
     'works_cat',
     'works',
+    'store_cat',
+    'store',
     'faq',
     'search',
     'about',
@@ -67,7 +74,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'get.urls'
-
 
 TEMPLATES = [
     {
