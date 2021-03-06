@@ -28,9 +28,9 @@ on('#ajax', 'click', '.a_1', function() {
     nav = is.parentElement.parentElement;
     tabs = nav.nextElementSibling;
     tabs_items = tabs.querySelectorAll(".tab-pane");
-    for (var i = 0; i < tabs_items.length; i++){tabs_items[i].classList.remove("active")};
+    for (var i = 0; i < tabs_items.length; i++){tabs_items[i].classList.remove("active", "in")};
     cur = tabs.querySelector(".auth_tab_1");
-    cur.classList.add("active")
+    cur.classList.add("active", "in")
 }
 });
 
@@ -42,9 +42,9 @@ on('#ajax', 'click', '.a_2', function() {
     nav = is.parentElement.parentElement;
     tabs = nav.nextElementSibling;
     tabs_items = tabs.querySelectorAll(".tab-pane");
-    for (var i = 0; i < tabs_items.length; i++){tabs_items[i].classList.remove("active")};
+    for (var i = 0; i < tabs_items.length; i++){tabs_items[i].classList.remove("active", "in")};
     cur = tabs.querySelector(".auth_tab_2");
-    cur.classList.add("active")
+    cur.classList.add("active", "in")
 }
 });
 
