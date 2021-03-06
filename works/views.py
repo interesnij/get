@@ -19,7 +19,7 @@ class WorksDetailView(TemplateView, CategoryListMixin):
 		return context
 
 
-class WorksCatView(ListView, CategoryListMixin):
+class WorksListView(ListView, CategoryListMixin):
 	template_name, paginate_by = None, 12
 
 	def get(self,request,*args,**kwargs):
@@ -27,13 +27,13 @@ class WorksCatView(ListView, CategoryListMixin):
 
 		self.cat = WorksCategory.objects.get(slug=self.kwargs["slug"])
 		self.template_name = get_small_template("works/works_list.html", request.META['HTTP_USER_AGENT'])
-		return super(WorksCatView,self).get(request,*args,**kwargs)
+		return super(WorksListView,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):
 		return Works.objects.filter(cat=self.cat)
 
 	def get_context_data(self, **kwargs):
-		context = super(WorksCatView, self).get_context_data(**kwargs)
+		context = super(WorksListView, self).get_context_data(**kwargs)
 		context['cat'] = self.cat
 		return context
 

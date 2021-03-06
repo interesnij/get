@@ -19,7 +19,7 @@ class StoreDetailView(TemplateView, CategoryListMixin):
 		return context
 
 
-class StoreCatView(ListView, CategoryListMixin):
+class StoreListView(ListView, CategoryListMixin):
 	template_name, paginate_by = None, 12
 
 	def get(self,request,*args,**kwargs):
@@ -27,13 +27,13 @@ class StoreCatView(ListView, CategoryListMixin):
 
 		self.cat = StoreCategory.objects.get(slug=self.kwargs["slug"])
 		self.template_name = get_small_template("store/store_list.html", request.META['HTTP_USER_AGENT'])
-		return super(StoreCatView,self).get(request,*args,**kwargs)
+		return super(StoreListView,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):
 		return Store.objects.filter(cat=self.cat)
 
 	def get_context_data(self, **kwargs):
-		context = super(StoreCatView, self).get_context_data(**kwargs)
+		context = super(StoreListView, self).get_context_data(**kwargs)
 		context['cat'] = self.cat
 		return context
 

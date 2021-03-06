@@ -34,16 +34,16 @@ a, b, div, ul, li{
 }
 
 body{
-    color: #111;
+    color: #000000;
 }
 .mobile-nav .fa {
-    color: black;
+    color: #000000;
 }
 a{
     color: #111;
 }
 a:hover{
-    color: black;
+    color: #000000;
 }
 
 pre{
