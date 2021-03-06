@@ -637,13 +637,6 @@ a.logo:hover{
 .alt-services-title{
     color: #111;
 }
-.team-item-detail{
-    color: #777;
-}
-
-.team-item-descr{
-    color: #777;
-}
 
 .team-item-role{
     color: #aaa;
@@ -687,14 +680,9 @@ a.logo:hover{
 .alt-features-icon{
     color: #111;
 }
-.alt-features-descr {
-    color: #777;
-}
+
 .benefit-number{
     color: rgba(0,0,0, .025);
-}
-.benefits-descr{
-    color: #777;
 }
 .benefit-item:after{
     background: rgba(0,0,0, .015);
