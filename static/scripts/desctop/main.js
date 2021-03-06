@@ -16,6 +16,9 @@ on('#ajax', 'click', '.s_4', function() {
 on('#ajax', 'click', '.s_5', function() {
   service_tab_action(this, ".tab_5")
 });
+on('#ajax', 'click', '.s_6', function() {
+  service_tab_action(this, ".tab_6")
+});
 
 on('body', 'click', '.ajax', function(event) {
   event.preventDefault();
