@@ -204,9 +204,9 @@ function loader_hide(){
 }
 
 function get_active_button(){
-  console.log(path.substr(0, 6))
   buttons = $mobile_nav.parentElement.querySelectorAll(".mobile_icon");
   path = document.location.pathname;
+  console.log(path.substr(0, 6))
   for (var i = 0; i < buttons.length; i++){buttons[i].classList.remove("mobile_icon_current")};
   for (var i = 0; i < buttons.length; i++){
     if (path == "/") {
