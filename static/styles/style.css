@@ -4279,6 +4279,7 @@ margin: 0 6px 0 3px;
 .toast h3 {
 font-weight: 400;
 font-size: 1.1em;
+margin: 2px;
 }
 .toast .exit {
 position: absolute;
