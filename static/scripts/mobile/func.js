@@ -206,12 +206,12 @@ function loader_hide(){
 function get_active_button(){
   buttons = $mobile_nav.parentElement.querySelectorAll(".mobile_icon");
   path = document.location.pathname;
-  console.log(path.substr(0, 6))
+  console.log(path.substr(1, 6))
   for (var i = 0; i < buttons.length; i++){buttons[i].classList.remove("mobile_icon_current")};
   for (var i = 0; i < buttons.length; i++){
     if (path == "/") {
     buttons[10].classList.add("mobile_icon_current"); break
-  } else if (path == "/auth/" || path.substr(0, 6) == "/users/") {
+  } else if (path == "/auth/" || path.substr(1, 6) == "/users/") {
     buttons[13].classList.add("mobile_icon_current"); break
   }
   else if (buttons[i].getAttribute("href") == path && (path.includes('service') || path.includes('works') || path.includes('blog') || path.includes('faq'))) {
