@@ -210,7 +210,7 @@ function get_active_button(){
   for (var i = 0; i < buttons.length; i++){
     if (path == "/") {
     buttons[10].classList.add("mobile_icon_current"); break
-  } else if (path == "/auth/" || path == "/users/") {
+  } else if (path == "/auth/" || path.substr(0, 6) == "/users/") {
     buttons[13].classList.add("mobile_icon_current"); break
   }
   else if (buttons[i].getAttribute("href") == path && (path.includes('service') || path.includes('works') || path.includes('blog') || path.includes('faq'))) {
