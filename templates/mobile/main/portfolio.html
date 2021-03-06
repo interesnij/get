@@ -1,3 +1,4 @@
+{% if works %}
 <section class="page-section pb-0" id="portfolio">
     <div class="relative">
         <h2 class="section-title font-alt mb-70 mb-sm-40">
@@ -19,7 +20,7 @@
                         <h3 class="work-title">{{ object.title }}</h3>
                         <div class="work-descr">
                           {% for cat in object.get_categories %}
-                            <a href="{% url 'work_list' slug=cat.slug %}" class="ajax">{{ cat.name }}</a>&nbsp;&nbsp; 
+                            <a href="{% url 'work_list' slug=cat.slug %}" class="ajax">{{ cat.name }}</a>&nbsp;&nbsp;
                           {% endfor %}
                         </div>
                     </div>
@@ -29,3 +30,4 @@
         </ul>
     </div>
 </section>
+{% endif %}
