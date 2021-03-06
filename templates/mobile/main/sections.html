@@ -168,7 +168,8 @@
                     <div class="row">
                       <div class="mb-sm-50">
                         <blockquote style="margin-bottom: 10px">
-                          <p style="text-decoration: underline;">Профиль</p>
+                          <span class="icon-attachment"></span>
+                          <a href="{% if request.user.is_authenticated %}{% url 'user' pk=request.user.pk %}{% else %}{% url 'login' %}{% endif %}" class="ajax" style="text-decoration: underline;">Профиль</a>
                         </blockquote>
                         <p>
                           Этот <strong>раздел предназначен для</strong> разнообразных занятий <strong>пользователя</strong>.
