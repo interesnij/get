@@ -2,7 +2,7 @@ from django.contrib import admin
 from store_cat.models import StoreCategory
 
 
-class WorksCategoryAdmin(admin.ModelAdmin):
+class StoreCategoryAdmin(admin.ModelAdmin):
     list_display = ['name', 'slug', 'order']
     list_filter = ['name']
     search_fields = ('name',)
