@@ -40,7 +40,7 @@ on('#ajax', 'click', '.a_2', function() {
     is.previousElementSibling.classList.remove("active");is.previousElementSibling.classList.add("pointer")
     is.classList.add("active"); is.classList.remove("pointer")
     nav = is.parentElement.parentElement;
-    tabs = nav.previousElementSibling;
+    tabs = nav.nextElementSibling;
     tabs_items = tabs.querySelectorAll(".tab-pane");
     for (var i = 0; i < tabs_items.length; i++){tabs_items[i].classList.remove("active")};
     cur = tabs.querySelector(".auth_tab_2");
