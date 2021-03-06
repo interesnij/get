@@ -16,3 +16,11 @@ class UserView(TemplateView, CategoryListMixin):
 		context=super(UserView,self).get_context_data(**kwargs)
 		context["user"] = self.user
 		return context
+
+
+class AuthView(TemplateView, CategoryListMixin):
+	template_name = None
+
+	def get(self,request,*args,**kwargs):
+		self.template_name = get_small_template("users/auth.html", request.META['HTTP_USER_AGENT'])
+		return super(AuthView,self).get(request,*args,**kwargs)
