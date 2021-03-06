@@ -18,7 +18,7 @@
 
 <hr class="mt-0 mb-0 " />
 
-{% include 'mobile/main/services.html' %}
+{% include 'mobile/main/sections.html' %}
 
 <hr class="mt-0 mb-0" />
 
@@ -30,14 +30,12 @@
 
 {% include 'mobile/main/newsletter.html' %}
 
-{% include 'mobile/main/find.html' %}
-
-<section class="small-section bg-dark">
+<section class="small-section bg_custom">
     <div class="container relative">
         <div class="align-center">
-            <h3 class="banner-heading font-alt">Want to discuss your new project?</h3>
+            <h3 class="banner-heading font-alt">Желаете обсудить что-либо??</h3>
             <div>
-                <a href="" class="btn btn-mod btn-w btn-medium btn-round">Lets tallk</a>
+                <a href="{% url 'contacts' %}" class="btn btn-mod btn-w btn-medium btn-round ajax">Наши контакты</a>
             </div>
         </div>
     </div>
