@@ -209,14 +209,14 @@ function get_active_button(){
   for (var i = 0; i < buttons.length; i++){buttons[i].classList.remove("mobile_icon_current")};
   for (var i = 0; i < buttons.length; i++){
     if (path == "/") {
-    buttons[8].classList.add("mobile_icon_current"); break
-  } else if (path == "/search/") {
-    buttons[11].classList.add("mobile_icon_current"); break
+    buttons[10].classList.add("mobile_icon_current"); break
+  } else if (path == "/auth/" || path == "/users/") {
+    buttons[13].classList.add("mobile_icon_current"); break
   }
   else if (buttons[i].getAttribute("href") == path && (path.includes('service') || path.includes('works') || path.includes('blog') || path.includes('faq'))) {
-    buttons[9].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
-  } else if (buttons[i].getAttribute("href") == path && (path == "/about/" || path == "/contacts/" || path == "/tags/" || path == "/search/" || path == "/design/")) {
     buttons[10].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
+  } else if (buttons[i].getAttribute("href") == path && (path == "/about/" || path == "/contacts/" || path == "/tags/" || path == "/search/" || path == "/design/")) {
+    buttons[11].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
   }
   };
 }

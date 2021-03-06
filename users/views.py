@@ -5,10 +5,11 @@ from common.utils import get_small_template
 
 
 class UserView(TemplateView, CategoryListMixin):
-	template_name = "users/user.html"
+	template_name = None
 
 	def get(self,request,*args,**kwargs):
 		self.user = User.objects.get(pk=self.kwargs["pk"])
+		self.template_name = get_small_template("users/user.html", request.META['HTTP_USER_AGENT'])
 		return super(UserView,self).get(request,*args,**kwargs)
 
 	def get_context_data(self,**kwargs):

@@ -2,7 +2,6 @@
 ajax = document.body.querySelector("#ajax");
 init_wow();
 get_active_button();
-banner_height_init(ajax);
 loader_hide(ajax);
 
 on('#ajax', 'click', '.s_1', function() {
