@@ -27,8 +27,8 @@ on('#ajax', 'click', '.a_1', function() {
     is.classList.add("active"); is.classList.remove("pointer")
     nav = is.parentElement.parentElement;
     tabs = nav.nextElementSibling;
-    tabs_items = tabs.querySelectorAll(".tab-pane");
-    for (var i = 0; i < tabs_items.length; i++){tabs_items[i].classList.remove("active", "in")};
+    tab_item = tabs.querySelector("auth_tab_2");
+    tab_item.classList.remove("active", "in");
     cur = tabs.querySelector(".auth_tab_1");
     cur.classList.add("active", "in")
 }
@@ -41,8 +41,8 @@ on('#ajax', 'click', '.a_2', function() {
     is.classList.add("active"); is.classList.remove("pointer")
     nav = is.parentElement.parentElement;
     tabs = nav.nextElementSibling;
-    tabs_items = tabs.querySelectorAll(".tab-pane");
-    for (var i = 0; i < tabs_items.length; i++){tabs_items[i].classList.remove("active", "in")};
+    tab_item = tabs.querySelector("auth_tab_1");
+    tab_item.classList.remove("active", "in");
     cur = tabs.querySelector(".auth_tab_2");
     cur.classList.add("active", "in")
 }
