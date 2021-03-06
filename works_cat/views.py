@@ -5,13 +5,13 @@ from works_cat.models import WorksCategory
 from common.utils import get_small_template
 
 
-class WorksListView(ListView, CategoryListMixin):
+class WorksCatsView(ListView, CategoryListMixin):
 	template_name = None
 	paginate_by = 20
 
 	def get(self,request,*args,**kwargs):
 		self.template_name = get_small_template("works/works_cats.html", request.META['HTTP_USER_AGENT'])
-		return super(WorksListView,self).get(request,*args,**kwargs)
+		return super(WorksCatsView,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):
 		cats = WorksCategory.objects.only("pk")

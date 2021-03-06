@@ -1,7 +1,7 @@
 from django.conf.urls import url
-from works_cat.views import WorksListView
+from works_cat.views import WorksCatsView
 
 
 urlpatterns = [
-    url(r'^$', WorksListView.as_view(), name='works_cats'),
+    url(r'^$', WorksCatsView.as_view(), name='works_cats'),
 ]
