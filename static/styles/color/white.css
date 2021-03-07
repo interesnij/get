@@ -4,19 +4,19 @@
 
 
 .main_banner {
-  background-image: url('/static/images/white/background');
+  background-image: url('/static/images/white/background.jpg');
 }
 .service_banner {
-  background-image: url('/static/images/white/background');
+  background-image: url('/static/images/white/background.jpg');
 }
 .work_banner {
-  background-image: url('/static/images/white/background');
+  background-image: url('/static/images/white/background.jpg');
 }
 .store_banner {
-  background-image: url('/static/images/white/background');
+  background-image: url('/static/images/white/background.jpg');
 }
 .blog_banner {
-  background-image: url('/static/images/white/background');
+  background-image: url('/static/images/white/background.jpg');
 }
 .bg_custom {
   background: #e5e5e5
