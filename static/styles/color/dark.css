@@ -28,16 +28,19 @@
   background-image: url('/static/images/dark/background.jpg') !important;
 }
 .service_banner {
-  background-image: url('/static/images/dark/background.jpg') !important;
+  background-image: url('/static/images/dark/service.jpg') !important;
 }
 .work_banner {
-  background-image: url('/static/images/dark/background.jpg') !important;
+  background-image: url('/static/images/dark/work.jpg') !important;
 }
 .store_banner {
-  background-image: url('/static/images/dark/background.jpg') !important;
+  background-image: url('/static/images/dark/store.jpg') !important;
 }
 .blog_banner {
   background-image: url('/static/images/dark/blog.jpg') !important;
+}
+.faq_banner {
+  background-image: url('/static/images/dark/faq.jpg') !important;
 }
 .bg_custom {
   background: #111 !important
