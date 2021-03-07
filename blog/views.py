@@ -30,7 +30,7 @@ class BloglistView(ListView, CategoryListMixin):
 		return super(BloglistView,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):
-		return Blog.objects.filter(cat=self.cat)
+		return Blog.objects.filter(category=self.cat)
 
 	def get_context_data(self, **kwargs):
 		context = super(BloglistView, self).get_context_data(**kwargs)

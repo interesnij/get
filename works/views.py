@@ -30,7 +30,7 @@ class WorksListView(ListView, CategoryListMixin):
 		return super(WorksListView,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):
-		return Works.objects.filter(cat=self.cat)
+		return Works.objects.filter(category=self.cat)
 
 	def get_context_data(self, **kwargs):
 		context = super(WorksListView, self).get_context_data(**kwargs)

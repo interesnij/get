@@ -30,7 +30,7 @@ class ServiceListView(ListView, CategoryListMixin):
 		return super(ServiceListView,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):
-		return Service.objects.filter(cat=self.cat)
+		return Service.objects.filter(category=self.cat)
 
 	def get_context_data(self, **kwargs):
 		context = super(ServiceListView, self).get_context_data(**kwargs)
