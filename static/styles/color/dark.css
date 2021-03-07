@@ -67,8 +67,8 @@ a, b, div, ul, li{
 }
 
 body{
-    color: #FFFFFF !important;
-    background-color: #111 !important;
+    color: rgba(255,255,255, 0.8) !important;
+    background-color: rgba(0,0,0, 0.8) !important;
 }
 .mobile-nav .fa {
     color: #FFFFFF !important;
