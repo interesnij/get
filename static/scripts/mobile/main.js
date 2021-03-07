@@ -116,3 +116,8 @@ on('body', 'click', '#logg', function() {
     }};
   link.send(form_data);
 });
+
+on('body', 'click', '.anon_color_change', function() {
+  style = document.querySelector(".color").getAttribute("href");
+   style.contains("white") ? addStyleSheets("/static/styles/color/black.css") : addStyleSheets("/static/styles/color/white.css")
+});

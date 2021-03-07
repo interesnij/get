@@ -1,5 +1,13 @@
 $mobile_nav = document.body.querySelector(".mobile_nav");
 
+function addStyleSheets(href) {
+    $head = document.head, $link = document.createElement('link');
+    $link.rel = 'stylesheet';
+    $link.classList.add("my_color_settings");
+    $link.href = href;
+    $head.appendChild($link)
+}
+
 class ToastManager {
     constructor() {
         this.id = 0;

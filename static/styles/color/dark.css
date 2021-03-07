@@ -172,3 +172,8 @@ hr{
 .features-descr{
     color: rgba(0,0,0, .75);
 }
+
+.big-icon{
+    color: #000;
+    border-color: rgba(0,0,0, .75);
+}

@@ -80,18 +80,6 @@ hr{
     background: rgba(255,255,255, .35);
 }
 
-.text{
-    color: #5f5f5f;
-}
-.text h1,
-.text h2,
-.text h3,
-.text h4,
-.text h5,
-.text h6{
-    color: #111;
-}
-
 .big-icon{
     border: 3px solid #fff;
     color: rgba(255,255,255, .97);
@@ -110,10 +98,6 @@ hr{
     color: rgba(255,255,255, .75);
 }
 
-.big-icon.black{
-    color: #000;
-    border-color: rgba(0,0,0, .75);
-}
 .big-icon-link:hover .big-icon.black{
     color: #000;
     border-color: #000;
@@ -507,10 +491,6 @@ a.logo:hover{
     color: #fff;
 }
 
-.js-opened > .fm-has-sub > .fa{
-    color: #fff;
-}
-
 .fm-search input.search-field{
     color: #555;
     border-bottom: 1px solid rgba(255,255,255, .2);
@@ -534,40 +514,6 @@ a.logo:hover{
 .fm-social-links > a:hover{
     border-color: rgba(255,255,255, .3);
     color: #999;
-}
-
-.bg-gray{
-    background-color: #f4f4f4;
-}
-.bg-gray-lighter{
-    background-color: #f8f8f8;
-}
-
-.bg-color .text,
-.bg-color-lighter .text,
-.bg-color-alfa-30 .text,
-.bg-color-alfa-50 .text,
-.bg-color-alfa-70 .text,
-.bg-color-alfa-90 .text,
-.bg-color-alfa .text,
-.bg-color .section-text,
-.bg-color-lighter .section-text,
-.bg-color-alfa-30 .section-text,
-.bg-color-alfa-50 .section-text,
-.bg-color-alfa-70 .section-text,
-.bg-color-alfa-90 .section-text,
-.bg-color-alfa .section-text{
-    color: rgba(255,255,255, .75);
-}
-
-.bg-color .white,
-.bg-color-lighter .whitet,
-.bg-color-alfa-30 .white,
-.bg-color-alfa-50 .white,
-.bg-color-alfa-70 .white,
-.bg-color-alfa-90 .white,
-.bg-color-alfa .white{
-    color: #fff;
 }
 
 .bg-light-alfa:before{
@@ -1147,19 +1093,6 @@ a.blog-item-more:hover{
     color: #555;
 }
 
-.et-examples .box1{
-    border: 1px solid #e5e5e5;
-}
-.et-examples{
-    color: #555;
-}
-.et-examples .box1:hover{
-    background: #f8f8f8;
-    color: #111;
-}
-.et-examples .box1 > span{
-    border-right: 1px solid #f1f1f1;
-}
 .label-new{
     background: #f32929;
 }
@@ -1249,16 +1182,6 @@ a.blog-item-more:hover{
     background: #fff;
 }
 
-.sp-button{
-    background: #111;
-}
-.sp-button span{
-    background: #fff;
-}
-.sp-button span:before,
-.sp-button span:after{
-    background: #fff;
-}
 .sp-menu-links a{
     color: #999;
 }
