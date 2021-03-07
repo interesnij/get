@@ -15,7 +15,6 @@
   display: -webkit-box;
   display: flex;
   justify-content: space-around;
-  background: white;
   z-index:3000;
   position: fixed;
   width: 100%;

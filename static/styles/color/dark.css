@@ -2,11 +2,14 @@
 ::-webkit-selection{ color: #000000 !important; background:#FFFFFF !important; }
 ::selection{ color: #000000 !important; background:#FFFFFF !important; }
 
+.mobile_nav {
+  background: #111 !important;
+}
 .mobile_icon_active, .mobile_icon_current{
   background: #111 !important;
 }
 .mobile_icon p{
-  color: #111 !important;
+  color: rgba(255, 255, 255, 0.7) !important;
 }
 .mobile_icon_active p, .mobile_icon_current p{
   color: #FFFFFF !important;
