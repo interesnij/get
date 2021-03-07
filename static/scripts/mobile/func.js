@@ -3,7 +3,7 @@ $mobile_nav = document.body.querySelector(".mobile_nav");
 function addStyleSheets(href) {
     $head = document.head, $link = document.createElement('link');
     $link.rel = 'stylesheet', $link.href = href;
-    $link.classList.add("color_settings");
+    $link.classList.add("color");
     $head.appendChild($link)
 }
 
