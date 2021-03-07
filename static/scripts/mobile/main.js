@@ -120,5 +120,5 @@ on('body', 'click', '#logg', function() {
 on('body', 'click', '.anon_color_change', function() {
   style = document.querySelector(".color").getAttribute("href");
   console.log(style);
-  style.includes("white") ? addStyleSheets("/static/styles/color/black.css") : addStyleSheets("/static/styles/color/white.css")
+  style.includes("white") ? addStyleSheets("/static/styles/color/dark.css") : addStyleSheets("/static/styles/color/white.css")
 });
