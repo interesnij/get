@@ -2,6 +2,22 @@
 ::-webkit-selection{ color: #fff !important; background:#000 !important; }
 ::selection{ color: #fff !important; background:#000 !important; }
 
+
+.main_banner {
+  background-image: url('/static/images/white/background');
+}
+.service_banner {
+  background-image: url('/static/images/white/background');
+}
+.work_banner {
+  background-image: url('/static/images/white/background');
+}
+.store_banner {
+  background-image: url('/static/images/white/background');
+}
+.blog_banner {
+  background-image: url('/static/images/white/background');
+}
 .bg_custom {
   background: #e5e5e5
 }

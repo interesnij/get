@@ -2,4 +2,22 @@
 {% block title %}Категории блога{% endblock %}
 {% block content %}
 
+<section class="home-section blog_banner">
+    <div class="js-height-full">
+        <div class="home-content container">
+            <div class="home-text">
+                <h2 class="hs-line-8 no-transp font-alt mb-50 mb-xs-30">
+                    Новости / События / Развитие / Мысли
+                </h2>
+                <h1 class="hs-line-14 font-alt mb-50 mb-xs-30">
+                    Наш блог
+                </h1>
+                <div class="local-scroll">
+                    <a href="{% url 'contacts' %}" class="btn btn-mod btn-border btn-medium btn-round ajax">О нас</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}
