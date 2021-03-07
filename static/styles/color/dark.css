@@ -5,6 +5,12 @@
 .mobile_nav {
   background: #111 !important;
 }
+.first_span {
+  background: #111 !important;
+}
+.second_span {
+  background: #111 !important;
+}
 .mobile_icon_active, .mobile_icon_current{
   background: #111 !important;
 }
