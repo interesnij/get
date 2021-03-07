@@ -40,7 +40,7 @@ class FaqCatView(ListView, CategoryListMixin):
 		return super(FaqCatView,self).get(request,*args,**kwargs)
 
 	def get_queryset(self):
-		return Faq.objects.filter(cat=self.cat)
+		return Faq.objects.filter(category=self.cat)
 
 	def get_context_data(self, **kwargs):
 		context = super(FaqCatView, self).get_context_data(**kwargs)
