@@ -125,17 +125,6 @@ function ajax_get_reload(url) {
     ajax_link.send();
 }
 
-function init_wow(){
-    var wow = new WOW({
-      boxClass: 'wow',
-      animateClass: 'animated',
-      offset: 90,
-      mobile: false,
-      live: true
-  });
-  wow.init();
-}
-
 function deactivate_nav_buttons(){
   buttons = $mobile_nav.querySelectorAll(".mobile_icon");
   for (var i = 0; i < buttons.length; i++){buttons[i].classList.remove("mobile_icon_active")};
@@ -200,7 +189,7 @@ function get_active_button(){
   } else if (path == "/auth/" || path.substr(1, 5) == "users") {
     buttons[13].classList.add("mobile_icon_current"); break
   }
-  else if (buttons[i].getAttribute("href") == path && (path.includes('service') || path.includes('works') || path.includes('blog') || path.includes('faq'))) {
+  else if (buttons[i].getAttribute("href") == path && (path.includes('service') || path.includes('works') || path.includes('store') || path.includes('blog') || path.includes('faq'))) {
     buttons[11].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
   } else if (buttons[i].getAttribute("href") == path && (path == "/about/" || path == "/contacts/" || path == "/tags/" || path == "/search/" || path == "/design/")) {
     buttons[12].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break

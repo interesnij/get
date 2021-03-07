@@ -1,6 +1,5 @@
 
 ajax = document.body.querySelector("#ajax");
-init_wow();
 get_active_button();
 loader_hide(ajax);
 

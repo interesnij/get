@@ -60,17 +60,11 @@
   line-height: 16px;
 }
 
-.mobile_icon_active, .mobile_icon_current{
-  background: #e5e5e5;
-}
 .mobile_icon p{
   margin: 0;
   font-size: 11px;
-  color: #777;
 }
-.mobile_icon_active p, .mobile_icon_current p{
-  color: black;
-}
+
 .mobile_icon_active span, .mobile_icon_current span{
   font-weight: bold;
 }
@@ -3920,9 +3914,6 @@ section:hover .small-item-carousel .owl-next{
     -border-radius: 2px;
 }
 
-.side-panel-is-left{
-    margin-left: 270px;
-}
 .sp-overlay{
     display: none;
     width: 100%;
@@ -3932,124 +3923,6 @@ section:hover .small-item-carousel .owl-next{
     left: 0;
     cursor:crosshair;
     z-index: 1030;
-}
-.side-panel{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 270px;
-    height: 100%;
-    padding-bottom: 60px;
-    overflow-y: auto;
-    text-align: center;
-    z-index: 1031;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.sp-close-button{
-    display: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 36px;
-    height: 36px;
-    opacity: .5;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-transition: all 0.17s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    -moz-transition: all 0.17s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    -o-transition: all 0.17s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    -ms-transition: all 0.17s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    transition: all 0.17s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-}
-.sp-close-button:hover{
-    opacity: .75;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-.sp-close-button:before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width:14px;
-    height: 2px;
-    margin: -1px 0 0 -7px;
-}
-.sp-close-button:after{
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width:2px;
-    height: 14px;
-    margin: -7px 0 0 -1px;
-}
-
-.sp-button{
-    display: none;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 54px;
-    height: 54px;
-    opacity: .85;
-    text-indent: -12345px;
-    z-index: 1030;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    -webkit-transition: opacity 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    -moz-transition: opacity 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    -o-transition: opacity 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    -ms-transition: opacity 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    transition: opacity 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-}
-.sp-button:hover{
-    opacity: 1;
-}
-.sp-button span{
-    display: block;
-    width: 22px;
-    height: 2px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -1px 0 0 -11px;
-    -webkit-transition: all 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    -moz-transition: all 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    -o-transition: all 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    -ms-transition: all 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-    transition: all 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-}
-.sp-button span:before,
-.sp-button span:after{
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    top: -6px;
-    left: 0;
-    -webkit-transition: top 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000), bottom 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000), -webkit-transform 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000) 0.07s;
-    -moz-transition: top 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000), bottom 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000), -moz-transform 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000) 0.07s;
-    -o-transition: top 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000), bottom 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000), -o-transform 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000) 0.07s;
-    -ms-transition: top 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000), bottom 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000), -ms-transform 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000) 0.07s;
-    transition: top 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000), bottom 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000), transform 0.2s cubic-bezier(0.000, 0.000, 0.580, 1.000) 0.07s;
-}
-.sp-button span:after{
-    top: auto;
-    bottom: -6px;
 }
 
 .sp-logo-wrap .logo{
@@ -4172,16 +4045,6 @@ section:hover .small-item-carousel .owl-next{
     -o-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
     -ms-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
     transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-}
-
-.no-touch .side-panel.white .sp-menu-links a:hover,
-.side-panel.white .sp-menu-links a:active,
-.side-panel.white .sp-menu-links li.js-opened > a{
-    text-decoration: none;
-}
-
-.side-panel.white .sp-sub > li{
-    border: none!important;
 }
 
 .tilt-wrap{
