@@ -1,7 +1,7 @@
 function addStyleSheets(href) {
     $head = document.head, $link = document.createElement('link');
     $link.rel = 'stylesheet';
-    $link.classList.add("my_color_settings");
+    $link.classList.add("color");
     $link.href = href;
     $head.appendChild($link)
 }

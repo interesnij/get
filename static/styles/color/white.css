@@ -113,12 +113,6 @@ hr{
     color: rgba(0,0,0, .75);
 }
 
-.btn-mod,
-a.btn-mod{
-    color: #fff;
-    background: rgba(34,34,34, .9);
-}
-
 .btn-mod:hover,
 .btn-mod:focus,
 a.btn-mod:hover,
