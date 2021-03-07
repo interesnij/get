@@ -2,6 +2,10 @@
 ::-webkit-selection{ color: #000000 !important; background:#FFFFFF !important; }
 ::selection{ color: #000000 !important; background:#FFFFFF !important; }
 
+.custom_btn{
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.7)
+}
 .mobile_nav {
   background: #111 !important;
 }
@@ -140,8 +144,8 @@ a.btn-mod:focus{
     background: rgba(255,255,255, 1) !important;
 }
 .btn-mod.btn-border{
-    color: #151515 !important;
-    border: 2px solid #151515 !important;
+    color: rgba(255,255,255, 0.8) !important;
+    border: 2px solid rgba(255,255,255, 0.8) !important;
 }
 
 .btn-mod.btn-border:hover,
@@ -223,8 +227,8 @@ a.btn-mod:focus{
 .form input[type="date"],
 .form input[type="color"],
 .form select{
-    color: #FFFFFF !important;
-    border: 1px solid rgba(255,255,255, .1) !important;
+    color: rgba(0,0,0, 0,7) !important;
+    border: 1px solid rgba(0,0,0, 0,7) !important;
 }
 
 .form input[type="text"]:hover,
