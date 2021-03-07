@@ -6,6 +6,7 @@ from pilkit.processors import ResizeToFill, ResizeToFit, Transpose
 from imagekit.models import ProcessedImageField
 from users.helpers import upload_to_user_directory
 from autoslug import AutoSlugField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Service(models.Model):
@@ -13,7 +14,7 @@ class Service(models.Model):
     image = ProcessedImageField(format='JPEG', blank=True, options={'quality': 90}, upload_to=upload_to_user_directory, processors=[ResizeToFit(width=1600, upscale=False)], verbose_name="Главное изображение")
     created = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name="Создан")
     description = models.CharField(max_length=500, blank=True, verbose_name="Описание")
-    content = models.TextField(verbose_name="Контент")
+    content = RichTextUploadingField(config_name='default',external_plugin_resources=[('codesnippet','/static/ckeditor_plugins/codesnippet/','plugin.js',)],)
     creator = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, on_delete=models.SET_NULL, verbose_name="Создатель")
     slug = AutoSlugField(populate_from='title', unique=True, db_index=True)
     category = models.ManyToManyField('service_cat.ServiceCategory', related_name="service_categories", blank=True, verbose_name="Категория")

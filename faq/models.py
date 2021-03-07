@@ -5,6 +5,7 @@ from django.conf import settings
 from users.helpers import upload_to_user_directory
 from pilkit.processors import ResizeToFill, ResizeToFit, Transpose
 from imagekit.models import ProcessedImageField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class FaqCategory(models.Model):
@@ -28,7 +29,7 @@ class Faq(models.Model):
 	title = models.CharField(max_length=200, verbose_name="Название")
 	created = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name="Создан")
 	description = models.CharField(max_length=500, blank=True, verbose_name="Описание")
-	content = models.TextField(verbose_name="content")
+	content = RichTextUploadingField(config_name='default',external_plugin_resources=[('codesnippet','/static/ckeditor_plugins/codesnippet/','plugin.js',)],)
 	creator = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, on_delete=models.SET_NULL, verbose_name="Создатель")
 	slug = AutoSlugField(populate_from='title', unique=True, db_index=True)
 	category = models.ManyToManyField(FaqCategory, related_name="faq_categories", blank=True, verbose_name="Категория")

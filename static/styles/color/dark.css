@@ -7,13 +7,13 @@
   background: rgba(0, 0, 0, 0.7)
 }
 .mobile_nav {
-  background: #111 !important;
+  background: rgba(0,0,0, 0.8) !important;
 }
 .first_span {
-  background: #111 !important;
+  background: rgba(0,0,0, 0.8) !important;
 }
 .second_span {
-  background: #111 !important;
+  background: rgba(0,0,0, 0.8) !important;
 }
 .mobile_icon_active, .mobile_icon_current{
   background: #111 !important;
@@ -891,14 +891,14 @@ a.blog-item-more:hover{
 }
 .tpl-minimal-tabs li.active a,
 .tpl-minimal-tabs li.active a:hover{
-    border: 1px solid #222 !important;
+    border: 1px solid rgba(255, 255, 255, 0.7);
     color: #FFFFFF !important;
 }
 
 .tpl-alt-tabs li.active a,
 .tpl-alt-tabs li.active a:hover,
 .tpl-alt-tabs li.active a:focus{
-    color: #FFFFFF !important;
+    color: 1px solid #FFFFFF !important;
     font-weight: bold;
 }
 .tpl-alt-tabs li.active span{
