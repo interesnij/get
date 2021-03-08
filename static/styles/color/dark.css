@@ -25,22 +25,22 @@
   color: #FFFFFF !important;
 }
 .main_banner {
-  background-image: url('/static/images/dark/main.jpg') !important;
+  background-image: url('/static/images/dark/background.jpg') !important;
 }
 .service_banner {
-  background-image: url('/static/images/dark/service.jpg') !important;
+  background-image: url('/static/images/dark/background.jpg') !important;
 }
 .work_banner {
   background-image: url('/static/images/dark/background.jpg') !important;
 }
 .store_banner {
-  background-image: url('/static/images/dark/store.jpg') !important;
+  background-image: url('/static/images/dark/background.jpg') !important;
 }
 .blog_banner {
-  background-image: url('/static/images/dark/blog.jpg') !important;
+  background-image: url('/static/images/dark/background.jpg') !important;
 }
 .faq_banner {
-  background-image: url('/static/images/dark/faq.jpg') !important;
+  background-image: url('/static/images/dark/background.jpg') !important;
 }
 .bg_custom {
   background: #111 !important
