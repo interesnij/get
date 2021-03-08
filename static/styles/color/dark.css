@@ -2,12 +2,6 @@
 ::-webkit-selection{ color: #000000 !important; background:#FFFFFF !important; }
 ::selection{ color: #000000 !important; background:#FFFFFF !important; }
 
-.js-height-full {
-  background: #2f4f4f !important;
-}
-.hs-line-14 {
-  color: yellow
-}
 .banner_block {
   display: inline-block;
   padding: 17px;
