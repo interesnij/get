@@ -24,6 +24,7 @@
 .mobile_icon_active p, .mobile_icon_current p{
   color: #FFFFFF !important;
 }
+/*
 .main_banner {
   background-image: url('/static/images/dark/background.jpg') !important;
 }
@@ -42,6 +43,7 @@
 .faq_banner {
   background-image: url('/static/images/dark/background.jpg') !important;
 }
+*/
 .bg_custom {
   background: #111 !important
 }

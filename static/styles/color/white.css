@@ -20,6 +20,7 @@
 .mobile_icon_active p, .mobile_icon_current p{
   color: black !important;
 }
+/*
 .main_banner {
   background-image: url('/static/images/white/background.jpg') !important;
 }
@@ -38,6 +39,7 @@
 .faq_banner {
   background-image: url('/static/images/white/background.jpg') !important;
 }
+*/
 .bg_custom {
   background: #e5e5e5 !important
 }
