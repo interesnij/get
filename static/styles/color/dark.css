@@ -2,6 +2,15 @@
 ::-webkit-selection{ color: #000000 !important; background:#FFFFFF !important; }
 ::selection{ color: #000000 !important; background:#FFFFFF !important; }
 
+.js-height-full {
+  background: #2f4f4f !important;
+}
+.banner_block {
+  display: inline-block;
+  padding: 17px;
+  box-shadow: 0 14px 28px rgb(255 255 255 / 50%), 0 10px 10px rgb(255 255 255 / 25%) !important;
+}
+
 .custom_btn{
   color: rgba(255, 255, 255, 0.8);
   background: rgba(0, 0, 0, 0.7)
