@@ -1,14 +1,5 @@
 @charset "utf-8";
 
-
-@font-face {
-	font-family: 'Open Sans';
-	src:url('/static/fonts/OpenSans-Regular.ttf');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-
 .mobile_nav {
   bottom: 0;
   left: 0;
@@ -287,7 +278,6 @@ img:not([draggable]), embed, object, video{
 
 body{
     font-size: 14px;
-    font-family: "Open Sans", arial, sans-serif;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
@@ -2644,7 +2634,6 @@ a.logo:hover{
     background: none;
     border: none;
     text-align: center;
-    font-family: "Open Sans", arial, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 300;
@@ -3076,7 +3065,6 @@ a.blog-item-more{
 .comment-item-data{
     margin: 0 0 5px;
     text-transform: uppercase;
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-size: 12px;
 }
 .comment-item-data a{
@@ -3291,7 +3279,6 @@ table.shopping-cart-table tr td{
 
 }
 .pricing-num sup{
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-weight: 400;
     position: relative;
