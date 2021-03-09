@@ -22,9 +22,9 @@
 .window_fullscreen_hide {
   cursor: pointer;
   position: absolute;
-  right: 40px;
+  right: 2px;
   margin: 10px;
-  top: 40px;
+  top: 3px;
   z-index: 500;
 }
 
