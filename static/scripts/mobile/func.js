@@ -128,7 +128,7 @@ function ajax_get_reload(url) {
         get_active_button();
         loader_hide(rtr);
         //try {
-          document.body.getElementById("reload_nav_block").innerHTML = rtr.querySelector('.sidebar').innerHTML
+          document.body.querySelector("#reload_nav_block").innerHTML = rtr.querySelector('.sidebar').innerHTML
         //}catch{ null };
       }
     }
