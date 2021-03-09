@@ -6,7 +6,7 @@
     <div class="relative container align-left">
         <h1 class="hs-line-11 mb-20 mb-xs-0">Блог</h1>
         <div class="hs-line-4">{{ cat.name }}</div>
-        <div class="mod-breadcrumbs align-right" style="margin-top: -5px;">
+        <div class="mod-breadcrumbs align-right" style="margin-top: 0;">
           <a class="ajax" href="{% url 'main' %}">Главная</a>&nbsp;/&nbsp;
           <a class="ajax" href="{% url 'blog_cats' %}">Блог</a>&nbsp;/&nbsp;
           <span>{{ cat.name }}</span>
@@ -23,7 +23,7 @@
                     {{ object.title }}
                 </a>
             </h2>
-            <div class="blog-item-data">
+            <div class="blog-item-data" style="margin-bottom: 10px;">
                 <span class="icon-clock"></span> {{ object.get_created }}
                 <span class="separator">&nbsp;</span>
                 <a href="{% url 'user' pk=object.creator.pk %}" class="ajax">
