@@ -7,7 +7,7 @@
   padding: 17px;
   box-shadow: 0 14px 28px rgb(255 255 255 / 50%), 0 10px 10px rgb(255 255 255 / 25%) !important;
 }
-.js-height-full {
+.js-height-full, .small-section {
   background: #2f4f4f !important;
 }
 .custom_btn{

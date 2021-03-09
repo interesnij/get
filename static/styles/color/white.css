@@ -2,7 +2,7 @@
 ::-webkit-selection{ color: #fff !important; background:#000 !important; }
 ::selection{ color: #fff !important; background:#000 !important; }
 
-.js-height-full {
+.js-height-full, .small-section {
   background: #e6e3df !important;
 }
 .hs-line-14 {

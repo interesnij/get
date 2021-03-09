@@ -30,3 +30,7 @@ class BlogCategory(models.Model):
 	def get_blog(self):
 		list = self.blog_categories.filter(category=self)
 		return list
+
+	def get_count(self):
+		list = self.blog_categories.filter(category=self).values("pk").count()
+		return list
