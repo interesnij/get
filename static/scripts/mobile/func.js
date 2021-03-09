@@ -128,6 +128,7 @@ function ajax_get_reload(url) {
         hide_nav_second_span();
         get_active_button();
         loader_hide(rtr);
+        console.log(sidebar);
         //try {
           document.body.querySelector("#reload_nav_block").innerHTML = sidebar.innerHTML
         //}catch{ null };
