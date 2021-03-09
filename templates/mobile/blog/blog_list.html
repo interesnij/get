@@ -1,18 +1,16 @@
 {% extends "base_mobile.html" %}
 {% block title %}Блог | {{ cat.name }}{% endblock %}
-{% block content %}
 
+{% block content %}
 <section class="small-section">
     <div class="relative container align-left">
-                <h1 class="hs-line-11 mb-20 mb-xs-0">Блог</h1>
-                <div class="hs-line-4">
-                    {{ cat.name }}
-                </div>
-                <div class="mod-breadcrumbs align-right">
-                    <a href="{% url 'main' slug=object.slug %}">Главная</a>&nbsp;/&nbsp;
-                    <a href="{% url 'blog_cats' %}">Блог</a>&nbsp;/&nbsp;
-                    <span>{{ cat.name }}</span>
-                </div>
+        <h1 class="hs-line-11 mb-20 mb-xs-0">Блог</h1>
+        <div class="hs-line-4">{{ cat.name }}</div>
+        <div class="mod-breadcrumbs align-right">
+          <a class="ajax" href="{% url 'main' %}">Главная</a>&nbsp;/&nbsp;
+          <a class="ajax" href="{% url 'blog_cats' %}">Блог</a>&nbsp;/&nbsp;
+          <span>{{ cat.name }}</span>
+        </div>
     </div>
 </section>
 
@@ -56,7 +54,6 @@
 
 {% block sidebar %}
 <div class="sidebar">
-
     <div class="widget">
         <form class="form-inline form" role="form">
             <div class="search-wrap">
@@ -86,9 +83,9 @@
         <h5 class="widget-title font-alt">Все теги</h5>
         <div class="widget-body">
             <div class="tags">
-                {% for object in all_tags %}
+              {% for object in all_tags %}
                 <a href="{% url 'tag' name=object.name %}" class="ajax">Design</a>
-                {% endfor %}
+              {% endfor %}
             </div>
         </div>
     </div>
@@ -119,4 +116,4 @@
         </div>
     </div>
 </div>
-{% endblock}
+{% endblock %}
