@@ -121,9 +121,10 @@ on('body', 'click', '.anon_color_change', function() {
   this.getAttribute("data-color") == "white" ? (addStyleSheets("/static/styles/color/dark.css"), this.setAttribute("data-color", "dark")):(addStyleSheets("/static/styles/color/white.css"), this.setAttribute("data-color", "white"))
 });
 
+
+
 on('body', 'click', '.window_fullscreen_hide', function() {
-  document.querySelector(".window_fullscreen").style.display = "none";
-  document.querySelector(".mob_menu").style.display = "block";
+  mob_menu_hide()
 });
 on('body', 'click', '.mob_menu', function() {
   this.style.display = "none";

@@ -6,6 +6,10 @@ function addStyleSheets(href) {
     $link.classList.add("color");
     $head.appendChild($link)
 }
+function mob_menu_hide() {
+  document.querySelector(".window_fullscreen").style.display = "none";
+  document.querySelector(".mob_menu").style.display = "block";
+}
 
 class ToastManager {
     constructor() {
@@ -129,9 +133,10 @@ function ajax_get_reload(url) {
         get_active_button();
         loader_hide(rtr);
         console.log(sidebar);
-        //try {
+        mob_menu_hide();
+        try {
           document.body.querySelector("#reload_nav_block").innerHTML = sidebar.innerHTML
-        //}catch{ null };
+        }catch{ null };
       }
     }
     ajax_link.send();
