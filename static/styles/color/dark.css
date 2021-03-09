@@ -911,7 +911,7 @@ a.blog-item-more:hover{
 .tpl-alt-tabs li.active a,
 .tpl-alt-tabs li.active a:hover,
 .tpl-alt-tabs li.active a:focus{
-    color: 1px solid #FFFFFF !important;
+    color: #FFFFFF !important;
     font-weight: bold;
 }
 .tpl-alt-tabs li.active span{
