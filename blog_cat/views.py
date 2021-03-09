@@ -15,9 +15,11 @@ class BlogCatsView(ListView, CategoryListMixin):
 
 	def get_context_data(self,**kwargs):
 		from blog.models import Blog
+		from tags.models import Tag
 
 		context=super(BlogCatsView,self).get_context_data(**kwargs)
 		context['last_blog'] = Blog.objects.only("pk")[0:6]
+		context['tags'] = Tag.objects.only("pk")
 		return context
 
 	def get_queryset(self):
