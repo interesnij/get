@@ -191,16 +191,18 @@
               {% for object in last_blog %}
                 <li class="clearfix">
                     <a href="{% url 'blog' slug=object.slug %}">
-                      <img src="{{ object.image.url }}" alt="img" class="widget-posts-img">
+                      <img src="{{ object.image.url }}" alt="img" class="widget-posts-img" style="width: 80px;">
                     </a>
                         <a href="{% url 'blog' slug=object.slug %}">
                           {{ object.title }}
                         </a>
-                        <span class="icon-clock"></span> {{ object.get_created }}
-                        <span class="separator">&nbsp;</span>
-                        <a href="{% url 'user' pk=object.creator.pk %}" class="ajax">
+                        <div class="widget-posts-descr">
+                          <span class="icon-clock"></span> {{ object.get_created }}
+                          <span class="separator">&nbsp;</span>
+                          <a href="{% url 'user' pk=object.creator.pk %}" class="ajax">
                             <span class="icon-profile-male"></span> {{ object.creator.username }}
-                        </a>
+                          </a>
+                        </div>
                 </li>
               {% endfor %}
             </ul>
