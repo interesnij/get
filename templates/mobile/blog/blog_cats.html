@@ -148,6 +148,78 @@
 
 {% block sidebar %}
 <div class="sidebar">
-  blog_cat
+    <div class="widget">
+        <form class="form-inline form" role="form">
+            <div class="search-wrap">
+                <button class="search-button" type="button" title="Поиск">
+                    <span class="icon-magnifying-glass"></span>
+                </button>
+                <input type="text" class="form-control search-field" placeholder="Поиск...">
+            </div>
+        </form>
+    </div>
+
+    <div class="widget">
+        <h5 class="widget-title font-alt">Категории блога</h5>
+        <div class="widget-body">
+            <ul class="clearlist widget-menu">
+                {% for object in blog_cat %}
+                <li style="font-size: 18px;">
+                    <a href="{% url 'blog_list' slug=object.slug %}" class="ajax">{{ object.name }}</a>
+                    <small> - {{ object.get_count }}</small>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h5 class="widget-title font-alt">Все теги</h5>
+        <div class="widget-body">
+            <div class="tags">
+              {% for object in tags %}
+                <a href="{% url 'tag' name=object.name %}" class="ajax">Design</a>
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h5 class="widget-title font-alt">Последние статьи</h5>
+        <div class="widget-body">
+            <ul class="clearlist widget-posts">
+              {% for object in last_blog %}
+                <li class="clearfix">
+                    <a href="{% url 'blog' slug=object.slug %}">
+                      <img src="{{ object.image.url }}" alt="img" class="widget-posts-img">
+                    </a>
+                    <div class="widget-posts-descr">
+                        <a href="{% url 'blog' slug=object.slug %}">
+                          {{ object.title }}
+                        </a>
+                        <a href="{% url 'user' pk=object.creator.pk %}" class="ajax">
+                            <span class="icon-profile-male"></span> {{ object.creator.username }}
+                        </a>
+                        <span class="separator">&nbsp;</span>
+                        <a href="{% url 'user' pk=object.creator.pk %}" class="ajax">
+                            <span class="icon-profile-male"></span> {{ object.creator.username }}
+                        </a>
+                    </div>
+                </li>
+              {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h5 class="widget-title font-alt">Архив</h5>
+        <div class="widget-body">
+            <ul class="clearlist widget-menu">
+                <li>
+                    <a href="#" title="">Февраль 2021</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
 {% endblock %}

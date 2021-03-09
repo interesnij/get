@@ -13,6 +13,13 @@ class BlogCatsView(ListView, CategoryListMixin):
 		self.template_name = get_small_template("blog/blog_cats.html", request.META['HTTP_USER_AGENT'])
 		return super(BlogCatsView,self).get(request,*args,**kwargs)
 
+	def get_context_data(self,**kwargs):
+		from blog.models import Blog
+		
+		context=super(BlogDetailView,self).get_context_data(**kwargs)
+		context['last_blog'] = Blog.objects.only("pk")[0:6]
+		return context
+
 	def get_queryset(self):
 		cats = BlogCategory.objects.only("pk")
 		return cats
