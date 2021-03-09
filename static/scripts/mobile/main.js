@@ -120,3 +120,10 @@ on('body', 'click', '#logg', function() {
 on('body', 'click', '.anon_color_change', function() {
   this.getAttribute("data-color") == "white" ? (addStyleSheets("/static/styles/color/dark.css"), this.setAttribute("data-color", "dark")):(addStyleSheets("/static/styles/color/white.css"), this.setAttribute("data-color", "white"))
 });
+
+on('body', 'click', '.window_fullscreen_hide', function() {
+  document.querySelector(".window_fullscreen").style.display = "none";
+});
+on('body', 'click', '.mob_menu', function() {
+  document.querySelector(".window_fullscreen").style.display = "block";
+})

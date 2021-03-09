@@ -3,8 +3,29 @@
 .mob_menu{
   z-index: 2;
   position: fixed;
-  bottom: 15px;
-  left: 5px;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.window_fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+  padding: 5;
+  display: block;
+  overflow: auto;
+}
+.window_fullscreen_hide {
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+  margin: 10px;
+  top: 40px;
+  z-index: 500;
 }
 
 .mobile_nav {
