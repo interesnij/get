@@ -28,7 +28,7 @@
             </span>
         </span>
         <span class="icon-search mob_menu"></span>
-        <br><br><br> 
+        <br><br><br>
         {% include "mobile/mobile_tab.html" %}
 
         <div class="card mb-3 window_fullscreen border" style="display:none">
@@ -38,7 +38,22 @@
     		      <path d="M0 0h24v24H0z" fill="none"/>
     		    </svg>
     		  </span>
-    		  <div id="window_loader" style="margin-top:30px;position:relative;"></div>
+    		  <div id="fixed_nav_block" style="margin-top:30px;position:relative;">
+            <div class="home-text">
+              <span class="banner_block">
+                <h3 class="hs-line-8 no-transp font-alt mb-50 mb-xs-30">
+                    Мир социальных сетей
+                </h3>
+                <h2 class="hs-line-14 font-alt mb-50 mb-xs-30">
+                    getnetwork!
+                </h2>
+              </span>
+            </div>
+          </div>
+          <div id="reload_nav_block" style="margin-top:20px;position:relative;">
+            {% block navigate %}
+            {% endblock %}
+          </div>
     		</div>
     </div>
 
