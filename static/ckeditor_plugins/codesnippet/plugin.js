@@ -48,7 +48,7 @@
 				// We might escape special regex chars below, but we expect that there
 				// should be no crazy values used as lang keys.
 				editor._.codesnippet.langsRegex = new RegExp( '(?:^|\\s)language-(' +
-					CKEDITOR.tools.object.keys( langs ).join( '|' ) + ')(?:\\s|$)' );
+					CKEDITOR.tools.objectKeys( langs ).join( '|' ) + ')(?:\\s|$)' );
 			};
 
 			editor.once( 'pluginsLoaded', function() {
