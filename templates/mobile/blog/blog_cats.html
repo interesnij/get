@@ -190,7 +190,7 @@
             <ul class="clearlist widget-posts">
               {% for object in last_blog %}
                 <li class="clearfix">
-                    <a href="{% url 'blog' slug=object.slug %}">
+                    <a href="{% url 'blog' slug=object.slug %}" class="ajax">
                       <img src="{{ object.image.url }}" alt="img" class="widget-posts-img" style="width: 80px;">
                     </a>
                         <a href="{% url 'blog' slug=object.slug %}">

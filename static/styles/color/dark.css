@@ -762,12 +762,6 @@ a.link-to-top{
     color: #FFFFFF !important;
 }
 
-.blog-item-data{
-    color: #aaa !important;
-}
-.blog-item-data a{
-    color: #aaa !important;
-}
 .blog-item-data a:hover{
     color: #FFFFFF !important;
 }
@@ -821,10 +815,6 @@ a.blog-item-more:hover{
     border-color: #ccc !important;
 }
 
-.widget-menu li small{
-    color: #aaa !important;
-}
-
 .tags a{
     border: 1px solid #e9e9e9 !important;
 }
@@ -840,19 +830,6 @@ a.blog-item-more:hover{
     color: #555 !important;
 }
 .widget-comments li a:hover{
-    color: #999 !important;
-}
-
-.widget-posts{
-    color: #aaa !important;
-}
-.widget-posts li{
-    border-bottom: 1px dotted #eaeaea !important;
-}
-.widget-posts li a{
-    color: #555 !important;
-}
-.widget-posts li a:hover{
     color: #999 !important;
 }
 
