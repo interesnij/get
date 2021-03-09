@@ -117,6 +117,7 @@ function ajax_get_reload(url) {
         elem_ = document.createElement('span');
         elem_.innerHTML = ajax_link.responseText;
         ajax = elem_.querySelector("#reload_block");
+        sidebar = elem_.querySelector(".sidebar");
         rtr = document.getElementById('ajax');
         rtr.innerHTML = ajax.innerHTML;
         window.scrollTo(0,0);
@@ -127,9 +128,8 @@ function ajax_get_reload(url) {
         hide_nav_second_span();
         get_active_button();
         loader_hide(rtr);
-        console.log(rtr);
         //try {
-          document.body.querySelector("#reload_nav_block").innerHTML = rtr.querySelector('.sidebar').innerHTML
+          document.body.querySelector("#reload_nav_block").innerHTML = sidebar.innerHTML
         //}catch{ null };
       }
     }
