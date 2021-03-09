@@ -1,6 +1,7 @@
 from django.views.generic.base import TemplateView
 from generic.mixins import CategoryListMixin
 from service.models import Service
+from tags.models import Tag
 from django.views.generic import ListView
 from common.utils import get_small_template
 
@@ -16,6 +17,7 @@ class ServiceDetailView(TemplateView, CategoryListMixin):
 	def get_context_data(self,**kwargs):
 		context=super(ServiceDetailView,self).get_context_data(**kwargs)
 		context["object"] = self.service
+		context['tags'] = Tag.objects.only("pk")
 		return context
 
 
@@ -35,4 +37,5 @@ class ServiceListView(ListView, CategoryListMixin):
 	def get_context_data(self, **kwargs):
 		context = super(ServiceListView, self).get_context_data(**kwargs)
 		context['cat'] = self.cat
+		context['tags'] = Tag.objects.only("pk")
 		return context

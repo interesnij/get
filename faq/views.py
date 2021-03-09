@@ -1,6 +1,7 @@
 from generic.mixins import CategoryListMixin
 from django.views.generic import ListView
 from faq.models import *
+from tags.models import Tag
 from common.utils import get_small_template
 from django.views.generic.base import TemplateView
 
@@ -28,6 +29,7 @@ class FaqDetailView(TemplateView, CategoryListMixin):
 	def get_context_data(self,**kwargs):
 		context=super(FaqDetailView,self).get_context_data(**kwargs)
 		context["object"] = self.faq
+		context['tags'] = Tag.objects.only("pk")
 		return context
 
 
@@ -45,4 +47,5 @@ class FaqCatView(ListView, CategoryListMixin):
 	def get_context_data(self, **kwargs):
 		context = super(FaqCatView, self).get_context_data(**kwargs)
 		context['cat'] = self.cat
+		context['tags'] = Tag.objects.only("pk")
 		return context

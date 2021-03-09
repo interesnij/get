@@ -1,6 +1,7 @@
 from django.views.generic.base import TemplateView
 from generic.mixins import CategoryListMixin
 from blog.models import Blog
+from tags.models import Tag
 from django.views.generic import ListView
 from common.utils import get_small_template
 
@@ -16,6 +17,7 @@ class BlogDetailView(TemplateView, CategoryListMixin):
 	def get_context_data(self,**kwargs):
 		context=super(BlogDetailView,self).get_context_data(**kwargs)
 		context["object"] = self.blog
+		context['tags'] = Tag.objects.only("pk")
 		return context
 
 
@@ -35,4 +37,5 @@ class BloglistView(ListView, CategoryListMixin):
 	def get_context_data(self, **kwargs):
 		context = super(BloglistView, self).get_context_data(**kwargs)
 		context['cat'] = self.cat
+		context['tags'] = Tag.objects.only("pk")
 		return context
