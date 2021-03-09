@@ -15,8 +15,8 @@ class BlogCatsView(ListView, CategoryListMixin):
 
 	def get_context_data(self,**kwargs):
 		from blog.models import Blog
-		
-		context=super(BlogDetailView,self).get_context_data(**kwargs)
+
+		context=super(BlogCatsView,self).get_context_data(**kwargs)
 		context['last_blog'] = Blog.objects.only("pk")[0:6]
 		return context
 
