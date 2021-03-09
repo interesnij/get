@@ -826,13 +826,7 @@ a.blog-item-more:hover{
 .search-button:hover + .search-field{
     border-color: #ccc !important;
 }
-.widget-menu li a{
-    color: #555 !important;
-}
-.widget-menu li a:hover,
-.widget-menu li a.active{
-    color: #999 !important;
-}
+
 .widget-menu li small{
     color: #aaa !important;
 }

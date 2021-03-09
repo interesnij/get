@@ -70,7 +70,7 @@
         <div class="widget-body">
             <ul class="clearlist widget-menu">
                 {% for object in blog_cat %}
-                <li>
+                <li style="font-size: 18px;">
                     <a href="{% url 'blog_list' slug=object.slug %}" class="ajax">{{ object.name }}</a>
                     <small> - {{ object.get_count }}</small>
                 </li>
@@ -83,7 +83,7 @@
         <h5 class="widget-title font-alt">Все теги</h5>
         <div class="widget-body">
             <div class="tags">
-              {% for object in all_tags %}
+              {% for object in tags %}
                 <a href="{% url 'tag' name=object.name %}" class="ajax">Design</a>
               {% endfor %}
             </div>
