@@ -123,7 +123,9 @@ on('body', 'click', '.anon_color_change', function() {
 
 on('body', 'click', '.window_fullscreen_hide', function() {
   document.querySelector(".window_fullscreen").style.display = "none";
+  document.querySelector(".mob_menu").style.display = "block";
 });
 on('body', 'click', '.mob_menu', function() {
+  this.style.display = "none";
   document.querySelector(".window_fullscreen").style.display = "block";
 })
