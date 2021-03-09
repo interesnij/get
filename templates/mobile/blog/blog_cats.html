@@ -178,7 +178,7 @@
         <div class="widget-body">
             <div class="tags">
               {% for object in tags %}
-                <a href="{% url 'tag' name=object.name %}" class="ajax">Design</a>
+                <a href="{% url 'tag' name=object.name %}" class="ajax">{{ object.name }}</a>
               {% endfor %}
             </div>
         </div>
