@@ -1095,12 +1095,6 @@ a.bg-video-button-muted{
     position: relative;
     top: 1px;
 }
-.top-links li .tooltip{
-    text-transform: none;
-    letter-spacing: normal;
-    z-index: 2003;
-
-}
 .top-links li a{
     display: block;
     min-width: 40px;
@@ -1519,12 +1513,6 @@ a.logo:hover{
     -o-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
     -ms-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
     transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
-}
-
-.main-nav .tooltip{
-    font-size: 12x;
-    text-transform: none;
-    letter-spacing: 0;
 }
 
  .fm-logo-wrap{
