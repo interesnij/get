@@ -217,27 +217,27 @@ function get_active_button(){
   else if (path.includes('service')) {
     buttons[0].classList.add("mobile_icon_current");
     buttons[11].classList.add("mobile_icon_current");
-    path.includes('list') ? mob_menu_btn_medium() : mob_menu_btn_bottom();
+    (path.includes('list') || path.includes('cat')) ? mob_menu_btn_medium() : mob_menu_btn_bottom();
   }
   else if (path.includes('works')) {
     buttons[1].classList.add("mobile_icon_current");
     buttons[11].classList.add("mobile_icon_current");
-    path.includes('list') ? mob_menu_btn_medium() : mob_menu_btn_bottom();
+    (path.includes('list') || path.includes('cat')) ? mob_menu_btn_medium() : mob_menu_btn_bottom();
   }
   else if (path.includes('store')) {
     buttons[2].classList.add("mobile_icon_current");
     buttons[11].classList.add("mobile_icon_current");
-    path.includes('list') ? mob_menu_btn_medium() : mob_menu_btn_bottom();
+    (path.includes('list') || path.includes('cat')) ? mob_menu_btn_medium() : mob_menu_btn_bottom();
   }
   else if (path.includes('blog')) {
     buttons[3].classList.add("mobile_icon_current");
     buttons[11].classList.add("mobile_icon_current");
-    path.includes('list') ? mob_menu_btn_medium() : mob_menu_btn_bottom();
+    (path.includes('list') || path.includes('cat')) ? mob_menu_btn_medium() : mob_menu_btn_bottom();
   }
   else if (path.includes('faq')) {
     buttons[4].classList.add("mobile_icon_current");
     buttons[11].classList.add("mobile_icon_current");
-    path.includes('list') ? mob_menu_btn_medium() : mob_menu_btn_bottom();
+    (path.includes('list') || path.includes('cat')) ? mob_menu_btn_medium() : mob_menu_btn_bottom();
   }
 
   else if (path == "/contacts/") {
