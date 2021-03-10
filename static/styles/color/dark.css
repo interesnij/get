@@ -290,22 +290,6 @@ a.btn-mod:focus{
     -moz-box-shadow: 0 0 3px rgba(21,21,21, .3) !important;
     box-shadow: 0 0 3px rgba(21,21,21, .3) !important;
 }
-.form input.error{
-    border-color: #e41919 !important;
-}
-
-.form div.error{
-    background: rgba(228,25,25, .75) !important;
-    color: #000000 !important;
-}
-.form div.success{
-    background: rgba(50,178,95, .75) !important;
-    color: #000000 !important;
-}
-
-.form-tip{
-    color: #aaa !important;
-}
 
 a.bg-video-button-muted{
     color: #000000 !important;
