@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+.my_ul li {
+  margin-bottom:5px
+}
 .mob_menu{
   z-index: 2;
   position: fixed;
