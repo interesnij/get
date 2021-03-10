@@ -10,7 +10,7 @@ class WorksDetailView(TemplateView, CategoryListMixin):
 	template_name = None
 
 	def get(self,request,*args,**kwargs):
-		self.work = Works.objects.get(pk=self.kwargs["pk"])
+		self.work = Works.objects.get(slug=self.kwargs["slug"])
 		self.template_name = get_small_template("works/work.html", request.META['HTTP_USER_AGENT'])
 		return super(WorksDetailView,self).get(request,*args,**kwargs)
 

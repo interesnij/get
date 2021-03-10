@@ -10,7 +10,7 @@ class BlogDetailView(TemplateView, CategoryListMixin):
 	template_name = None
 
 	def get(self,request,*args,**kwargs):
-		self.blog = Blog.objects.get(pk=self.kwargs["pk"])
+		self.blog = Blog.objects.get(slug=self.kwargs["slug"])
 		self.template_name = get_small_template("blog/blog.html", request.META['HTTP_USER_AGENT'])
 		return super(BlogDetailView,self).get(request,*args,**kwargs)
 

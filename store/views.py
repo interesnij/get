@@ -10,7 +10,7 @@ class StoreDetailView(TemplateView, CategoryListMixin):
 	template_name = None
 
 	def get(self,request,*args,**kwargs):
-		self.store = Store.objects.get(pk=self.kwargs["pk"])
+		self.store = Store.objects.get(slug=self.kwargs["slug"])
 		self.template_name = get_small_template("store/store.html", request.META['HTTP_USER_AGENT'])
 		return super(StoreDetailView,self).get(request,*args,**kwargs)
 
