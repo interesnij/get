@@ -50,6 +50,15 @@ class Blog(models.Model):
     def get_videos(self):
         return self.video_blog.filter(blog_id=self.pk)
 
+    def get_tags(self):
+        return self.blog_tags.all()
+
+    def get_categories(self):
+        return self.category.all()
+
+    def get_related_articles(self):
+        return Blog.objects.filter(category__in=self.get_categories())[:6]
+
 
 class BlogDoc(models.Model):
     title = models.CharField(max_length=200, verbose_name="Название")
