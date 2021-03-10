@@ -11,6 +11,16 @@ function mob_menu_hide() {
   document.querySelector(".mob_menu").style.display = "block";
 }
 
+function mob_menu_btn_top() {
+  document.querySelector(".mob_menu").style.top = "15px";
+}
+function mob_menu_btn_medium() {
+  document.querySelector(".mob_menu").style.top = "50%";
+}
+function mob_menu_btn_bottom() {
+  document.querySelector(".mob_menu").style.top = "86%";
+}
+
 class ToastManager {
     constructor() {
         this.id = 0;
@@ -206,7 +216,7 @@ function get_active_button(){
   } else if (path == "/auth/" || path.substr(1, 5) == "users") {
     buttons[13].classList.add("mobile_icon_current"); break
   }
-  else if (buttons[i].getAttribute("href") == path && (path.includes('service') || path.includes('works') || path.includes('store') || path.includes('blog') || path.includes('faq'))) {
+  else if (buttons[i].getAttribute("href") == path || (path.includes('service') || path.includes('works') || path.includes('store') || path.includes('blog') || path.includes('faq'))) {
     buttons[11].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
   } else if (buttons[i].getAttribute("href") == path && (path == "/about/" || path == "/contacts/" || path == "/tags/" || path == "/search/" || path == "/design/")) {
     buttons[12].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
