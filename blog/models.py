@@ -53,13 +53,13 @@ class Blog(models.Model):
     def get_tags(self):
         from tags.models import Tag
 
-        return Tag.objects.filter(blog=self) 
+        return Tag.objects.filter(blog=self)
 
     def get_categories(self):
         return self.category.all()
 
     def get_related_articles(self):
-        return Blog.objects.filter(category__in=self.get_categories())[:6]
+        return Blog.objects.filter(category__in=self.get_categories()).distinct()[:6]
 
 
 class BlogDoc(models.Model):
