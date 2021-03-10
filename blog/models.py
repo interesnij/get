@@ -51,7 +51,9 @@ class Blog(models.Model):
         return self.video_blog.filter(blog_id=self.pk)
 
     def get_tags(self):
-        return self.blog_tags.all()
+        from tags.models import Tag
+
+        return Tag.objects.filter(blog_id=self.pk) 
 
     def get_categories(self):
         return self.category.all()

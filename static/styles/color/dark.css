@@ -101,10 +101,6 @@ a:hover{
     color: #FFFFFF !important;
 }
 
-pre{
-    background-color: #f9f9f9 !important;
-    border-color: #ddd !important;
-}
 hr{
     background-color: rgba(0,0,0, .08) !important;
     border-color: rgba(0,0,0, .35) !important;
@@ -938,12 +934,6 @@ a.blog-item-more:hover{
 }
 .toggle > dt > a:hover:after{
     color: #444 !important;
-}
-
-.highlight pre{
-    border-color: #eaeaea !important;
-    background: #fcfcfc !important;
-    color: #555 !important;
 }
 
 .label-new{
