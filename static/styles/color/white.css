@@ -2,7 +2,7 @@
 ::-webkit-selection{ color: #fff !important; background:#000 !important; }
 ::selection{ color: #fff !important; background:#000 !important; }
 
-.js-height-full, .small-section {
+.js-height-full, .small-section, .mob_menu {
   background: #e6e3df !important;
 }
 .hs-line-14 {
@@ -11,6 +11,9 @@
 .banner_block {
   display: inline-block;
   padding: 17px;
+  box-shadow: 0 0px 15px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%) !important;
+}
+.mob_menu {
   box-shadow: 0 0px 15px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%) !important;
 }
 .mobile_nav {
