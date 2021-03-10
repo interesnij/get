@@ -118,7 +118,13 @@ on('body', 'click', '#logg', function() {
 });
 
 on('body', 'click', '.anon_color_change', function() {
-  this.getAttribute("data-color") == "white" ? (addStyleSheets("/static/styles/color/dark.css"), this.setAttribute("data-color", "dark")):(addStyleSheets("/static/styles/color/white.css"), this.setAttribute("data-color", "white"))
+  if (this.getAttribute("data-color") == "white") {
+    addStyleSheets("/static/styles/color/dark.css"); this.setAttribute("data-color", "dark")
+  } else if (this.getAttribute("data-color") == "dark") {
+    addStyleSheets("/static/styles/color/yellow.css"), this.setAttribute("data-color", "yellow")
+  } else if (this.getAttribute("data-color") == "yellow") {
+    addStyleSheets("/static/styles/color/white.css"), this.setAttribute("data-color", "white")
+  }
 });
 
 

@@ -3,7 +3,7 @@
 ::selection{ color: #fff !important; background:#000 !important; }
 
 .js-height-full, .small-section, .mob_menu {
-  background: #e6e3df !important;
+  background: #f1bfa9 !important;
 }
 .hs-line-14 {
   text-shadow: 0px 5px 3px rgb(0 0 0 / 30%);
@@ -17,16 +17,16 @@
   box-shadow: 0 0px 15px rgb(0 0 0 / 25%), 0 10px 10px rgb(0 0 0 / 22%) !important;
 }
 .mobile_nav {
-  background: #FFFFFF !important;
+  background: #fee6a1 !important;
 }
 .first_span {
-  background: #FFFFFF !important;
+  background: #fee6a1 !important;
 }
 .second_span {
-  background: #FFFFFF !important;
+  background: #fee6a1 !important;
 }
 .mobile_icon_active, .mobile_icon_current{
-  background: #e6e3df !important;
+  background: #f1bfa9 !important;
 }
 .mobile_icon p{
   color: #777 !important;
@@ -42,7 +42,7 @@
     color: rgba(0, 0, 0, 0.5) !important;
 }
 .border {
-    border: 1px solid rgba(127,127,127, 0.7) !important;
+    border: 1px solid #f1bfa9 !important;
 }
 
 .svg_info {
@@ -53,7 +53,7 @@ a, b, div, ul, li{
 }
 
 .page-loader{
-    background: #fefefe !important;
+    background: #f1bfa9 !important;
 }
 .loader{
     border-top: 1px solid rgba(0,0,0, 0.08) !important;
@@ -68,7 +68,7 @@ body{
 }
 .window_fullscreen {
   color: rgba(0,0,0, 0.9) !important;
-  background-color: #e6e3df !important;
+  background-color: #f1bfa9 !important;
 }
 .mobile-nav .fa {
     color: #000000 !important;
