@@ -210,16 +210,47 @@ function get_active_button(){
   buttons = $mobile_nav.parentElement.querySelectorAll(".mobile_icon");
   path = document.location.pathname;
   for (var i = 0; i < buttons.length; i++){buttons[i].classList.remove("mobile_icon_current")};
-  for (var i = 0; i < buttons.length; i++){
-    if (path == "/") {
-    buttons[10].classList.add("mobile_icon_current"); break
-  } else if (path == "/auth/" || path.substr(1, 5) == "users") {
-    buttons[13].classList.add("mobile_icon_current"); break
+  if (path == "/") {
+      buttons[10].classList.add("mobile_icon_current")
+    }
+  else if (path.includes('service')) {
+    buttons[0].classList.add("mobile_icon_current");
+    buttons[11].classList.add("mobile_icon_current")
   }
-  else if (buttons[i].getAttribute("href") == path || (path.includes('service') || path.includes('works') || path.includes('store') || path.includes('blog') || path.includes('faq'))) {
-    buttons[11].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
-  } else if (buttons[i].getAttribute("href") == path && (path == "/about/" || path == "/contacts/" || path == "/tags/" || path == "/search/" || path == "/design/")) {
-    buttons[12].classList.add("mobile_icon_current"); buttons[i].classList.add("mobile_icon_current"); break
+  else if (path.includes('works')) {
+    buttons[1].classList.add("mobile_icon_current");
+    buttons[11].classList.add("mobile_icon_current")
   }
-  };
+  else if (path.includes('store')) {
+    buttons[2].classList.add("mobile_icon_current");
+    buttons[11].classList.add("mobile_icon_current")
+  }
+  else if (path.includes('blog')) {
+    buttons[3].classList.add("mobile_icon_current");
+    buttons[11].classList.add("mobile_icon_current")
+  }
+  else if (path.includes('faq')) {
+    buttons[4].classList.add("mobile_icon_current");
+    buttons[11].classList.add("mobile_icon_current")
+  }
+
+  else if (path == "/contacts/") {
+    buttons[5].classList.add("mobile_icon_current");
+    buttons[12].classList.add("mobile_icon_current")
+  }
+  else if (path == "/about/") {
+    buttons[6].classList.add("mobile_icon_current");
+    buttons[12].classList.add("mobile_icon_current")
+  }
+  else if (path == "/tags/") {
+    buttons[7].classList.add("mobile_icon_current");
+    buttons[12].classList.add("mobile_icon_current")
+  }
+  else if (path == "/search/") {
+    buttons[8].classList.add("mobile_icon_current");
+    buttons[12].classList.add("mobile_icon_current")
+  }
+  else if (path == "/auth/" || path.substr(1, 5) == "users") {
+    buttons[13].classList.add("mobile_icon_current")
+    }
 }
