@@ -806,7 +806,9 @@ pre {
     word-wrap: break-word;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: max-content;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 pre code {
@@ -815,7 +817,8 @@ pre code {
     color: inherit;
     white-space: pre-wrap;
     background-color: transparent;
-    border-radius: 0
+    border-radius: 0;
+    flex: 0 0 auto;
 }
 
 .pre-scrollable {
