@@ -53,7 +53,7 @@ class Blog(models.Model):
     def get_tags(self):
         from tags.models import Tag
 
-        return Tag.objects.filter(blog_id=self.pk) 
+        return Tag.objects.filter(blog=self) 
 
     def get_categories(self):
         return self.category.all()
